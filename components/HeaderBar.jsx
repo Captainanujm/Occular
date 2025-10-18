@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Search, ChevronDown } from "lucide-react";
+import Link from "next/link";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -9,8 +10,11 @@ const poppins = Poppins({
 });
 
 const HeaderBar = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <header
+      className={poppins.className}
       style={{
         width: "100%",
         backgroundColor: "#fff",
@@ -22,8 +26,10 @@ const HeaderBar = () => {
         border: "1px solid #ddd",
         boxSizing: "border-box",
         height: "90px",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
       }}
-      className={poppins.className}
     >
       {/* Left: Logo */}
       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -55,35 +61,131 @@ const HeaderBar = () => {
           fontSize: "15px",
           fontWeight: "500",
           textTransform: "uppercase",
+          position: "relative",
         }}
       >
-        <a href="#" style={{ color: "#0074b7", textDecoration: "none" }}>
+        <Link href="/" style={{ color: "#0074b7", textDecoration: "none" }}>
           Home
-        </a>
+        </Link>
 
-        <a href="#" style={{ color: "#222", textDecoration: "none", display: "flex", alignItems: "center", gap: "5px" }}>
+        <Link
+          href="#"
+          style={{
+            color: "#222",
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+            gap: "5px",
+          }}
+        >
           About Us <ChevronDown size={16} />
-        </a>
+        </Link>
 
-        <a href="#" style={{ color: "#222", textDecoration: "none", display: "flex", alignItems: "center", gap: "5px" }}>
+        <Link
+          href="#"
+          style={{
+            color: "#222",
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+            gap: "5px",
+          }}
+        >
           Facility <ChevronDown size={16} />
-        </a>
+        </Link>
 
-        <a href="#" style={{ color: "#222", textDecoration: "none", display: "flex", alignItems: "center", gap: "5px" }}>
-          Products <ChevronDown size={16} />
-        </a>
+        {/* PRODUCTS MENU WITH DROPDOWN */}
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            cursor: "pointer",
+          }}
+          onMouseEnter={() => setOpenMenu(true)}
+          onMouseLeave={() => setOpenMenu(false)}
+        >
+          <span
+            style={{
+              color: "#222",
+              display: "flex",
+              alignItems: "center",
+              gap: "5px",
+              textDecoration: "none",
+            }}
+          >
+            Products <ChevronDown size={16} />
+          </span>
 
-        <a href="#" style={{ color: "#222", textDecoration: "none" }}>
+          {/* Dropdown */}
+          {openMenu && (
+            <ul
+              style={{
+                position: "absolute",
+                top: "100%",
+                left: 0,
+                backgroundColor: "#fff",
+                border: "1px solid #ddd",
+                borderRadius: "6px",
+                boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+                listStyle: "none",
+                margin: 0,
+                padding: "10px 0",
+                width: "200px",
+                zIndex: 1000,
+              }}
+            >
+              <li style={{ padding: "8px 16px" }}>
+                <Link
+                  href="/products/all-products"
+                  style={{
+                    color: "#333",
+                    textDecoration: "none",
+                    display: "block",
+                  }}
+                >
+                  All Products
+                </Link>
+              </li>
+              <li style={{ padding: "8px 16px" }}>
+                <Link
+                  href="/products/sections"
+                  style={{
+                    color: "#333",
+                    textDecoration: "none",
+                    display: "block",
+                  }}
+                >
+                  Section Wise
+                </Link>
+              </li>
+              <li style={{ padding: "8px 16px" }}>
+                <Link
+                  href="/products/classifications"
+                  style={{
+                    color: "#333",
+                    textDecoration: "none",
+                    display: "block",
+                  }}
+                >
+                  Category Wise
+                </Link>
+              </li>
+            </ul>
+          )}
+        </div>
+
+        <Link href="#" style={{ color: "#222", textDecoration: "none" }}>
           Track Order
-        </a>
+        </Link>
 
-        <a href="#" style={{ color: "#222", textDecoration: "none" }}>
+        <Link href="#" style={{ color: "#222", textDecoration: "none" }}>
           Visual Aid
-        </a>
+        </Link>
 
-        <a href="#" style={{ color: "#222", textDecoration: "none" }}>
+        <Link href="#" style={{ color: "#222", textDecoration: "none" }}>
           Contact
-        </a>
+        </Link>
       </nav>
 
       {/* Right: Search */}

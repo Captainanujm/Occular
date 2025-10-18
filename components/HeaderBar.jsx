@@ -1,6 +1,6 @@
-// components/HeaderBar.jsx
+"use client";
 import React from "react";
-import { Search } from "lucide-react"; // npm install lucide-react
+import { Search, ChevronDown } from "lucide-react";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -15,34 +15,76 @@ const HeaderBar = () => {
         width: "100%",
         backgroundColor: "#fff",
         boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-        padding: "16px 32px",
+        padding: "10px 40px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        border: "1px solid black", // ✅ Added border here
+        border: "1px solid #ddd",
         boxSizing: "border-box",
+        height: "90px",
       }}
+      className={poppins.className}
     >
       {/* Left: Logo */}
       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
         <img
-          src="/Logo_image.jpg" // Place logo image in public folder
+          src="/Logo_image.jpg"
           alt="Occular Logo"
-          width="110"
-          height="110"
+          width="90"
+          height="90"
           style={{ objectFit: "contain" }}
         />
         <h1
-          className={poppins.className}
           style={{
             fontSize: "24px",
-            fontWeight: "bold",
+            fontWeight: "700",
             color: "#0074b7",
+            marginLeft: "8px",
           }}
         >
           Occular
         </h1>
       </div>
+
+      {/* Center: Navigation Menu */}
+      <nav
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "30px",
+          fontSize: "15px",
+          fontWeight: "500",
+          textTransform: "uppercase",
+        }}
+      >
+        <a href="#" style={{ color: "#0074b7", textDecoration: "none" }}>
+          Home
+        </a>
+
+        <a href="#" style={{ color: "#222", textDecoration: "none", display: "flex", alignItems: "center", gap: "5px" }}>
+          About Us <ChevronDown size={16} />
+        </a>
+
+        <a href="#" style={{ color: "#222", textDecoration: "none", display: "flex", alignItems: "center", gap: "5px" }}>
+          Facility <ChevronDown size={16} />
+        </a>
+
+        <a href="#" style={{ color: "#222", textDecoration: "none", display: "flex", alignItems: "center", gap: "5px" }}>
+          Products <ChevronDown size={16} />
+        </a>
+
+        <a href="#" style={{ color: "#222", textDecoration: "none" }}>
+          Track Order
+        </a>
+
+        <a href="#" style={{ color: "#222", textDecoration: "none" }}>
+          Visual Aid
+        </a>
+
+        <a href="#" style={{ color: "#222", textDecoration: "none" }}>
+          Contact
+        </a>
+      </nav>
 
       {/* Right: Search */}
       <div
@@ -61,7 +103,8 @@ const HeaderBar = () => {
             padding: "8px 12px",
             border: "none",
             outline: "none",
-            width: "250px",
+            width: "200px",
+            fontFamily: "inherit",
           }}
         />
         <button

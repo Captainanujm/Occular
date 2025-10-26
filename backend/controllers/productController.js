@@ -37,7 +37,23 @@ export const getSections = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+export const getProductBySlug = async (req, res) => {
+  try {
+    const { slug } = req.params;
+    // Convert slug (like "ocilar-plus") back to readable name (like "OCILAR PLUS")
+    const name = slug.replace(/-/g, " ");
 
+    const product = await Product.findOne({ name: new RegExp(`^${name}$`, "i") });
+
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    res.json(product);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
 // GET /api/classifications - unique classifications
 export const getClassifications = async (req, res) => {
   try {

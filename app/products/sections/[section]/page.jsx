@@ -2,13 +2,13 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/ProductCard";
-
+import Link from "next/link";
 export default function ProductSectionPage() {
   const { section } = useParams(); // dynamic route param
   const api = process.env.NEXT_PUBLIC_API_URL;
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
+const createSlug = (name) => name.toLowerCase().replace(/\s+/g, "-");
   useEffect(() => {
     if (!section) return;
 
@@ -37,7 +37,13 @@ export default function ProductSectionPage() {
       ) : products.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p) => (
-            <ProductCard key={p._id} product={p} />
+             <Link
+            key={p._id}
+            href={`/products/${createSlug(p.name)}`}
+            className="block group"
+          >
+            <ProductCard product={p} />
+          </Link>
           ))}
         </div>
       ) : (

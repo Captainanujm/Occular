@@ -1,4 +1,3 @@
-// backend/seed.js
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import { Product } from "./models/Product.js";
@@ -8,57 +7,264 @@ await connectDB();
 
 export const sample = [
   // 👁️ Eye / Ear Drops
-  { name: "OCILAR", section: "Eye and Ear Drops", classification: "Antibiotic", formulation: "Topical", packing: "10 ml", mrp: "₹40" },
-  { name: "NEOZIN", section: "Eye and Ear Drops", classification: "Anti-inflammatory", formulation: "Topical", packing: "5 ml", mrp: "₹48" },
-  { name: "CLARIDEX", section: "Eye and Ear Drops", classification: "Steroid + Antibiotic", formulation: "Topical", packing: "10 ml", mrp: "₹55" },
-  { name: "OTRIVIN-E", section: "Eye and Ear Drops", classification: "Decongestant", formulation: "Topical", packing: "10 ml", mrp: "₹42" },
-  { name: "AURIMED", section: "Eye and Ear Drops", classification: "Anti-fungal", formulation: "Topical", packing: "10 ml", mrp: "₹58" },
+  {
+    name: "OCILAR",
+    slug: "ocilar",
+    section: "Eye and Ear Drops",
+    classification: "Antibiotic",
+    formulation: "Topical",
+    packing: "10 ml",
+    mrp: "₹40",
+    description:
+      "OCILAR is a trusted antibiotic eye and ear drop used to treat bacterial infections effectively.",
+    details: [
+      {
+        heading: "Usage",
+        content:
+          "Apply as directed by the physician. Typically used for bacterial infections in the eyes or ears.",
+      },
+      {
+        heading: "Composition",
+        content:
+          "Contains broad-spectrum antibiotic agents designed for topical application.",
+      },
+    ],
+  },
+  {
+    name: "NEOZIN",
+    slug: "neozin",
+    section: "Eye and Ear Drops",
+    classification: "Anti-inflammatory",
+    formulation: "Topical",
+    packing: "5 ml",
+    mrp: "₹48",
+    description:
+      "NEOZIN provides quick relief from inflammation and irritation in the eyes or ears.",
+    details: [
+      {
+        heading: "Benefits",
+        content:
+          "Reduces redness and inflammation effectively with minimal side effects.",
+      },
+      {
+        heading: "Direction for Use",
+        content:
+          "Instill 1–2 drops as prescribed, avoiding contamination of the dropper tip.",
+      },
+    ],
+  },
+  {
+    name: "CLARIDEX",
+    slug: "claridex",
+    section: "Eye and Ear Drops",
+    classification: "Steroid + Antibiotic",
+    formulation: "Topical",
+    packing: "10 ml",
+    mrp: "₹55",
+    description:
+      "CLARIDEX combines steroid and antibiotic properties to reduce inflammation and fight infection.",
+    details: [
+      {
+        heading: "Mechanism",
+        content:
+          "Targets both bacterial infection and inflammatory response for faster recovery.",
+      },
+      {
+        heading: "Storage",
+        content: "Store in a cool and dry place away from direct sunlight.",
+      },
+    ],
+  },
 
   // 💊 Tablets
-  { name: "ACELAR-PLUS", section: "Tablet", classification: "Pain Relief", formulation: "Oral Solid", packing: "10x10", mrp: "₹55" },
-  { name: "PANTODOM", section: "Tablet", classification: "Gastrointestinal", formulation: "Oral Solid", packing: "10x10", mrp: "₹68" },
-  { name: "CITRAVIT-C", section: "Tablet", classification: "Vitamin Supplement", formulation: "Oral Solid", packing: "10x15", mrp: "₹95" },
-  { name: "CEFIXA-200", section: "Tablet", classification: "Antibiotic", formulation: "Oral Solid", packing: "10x10", mrp: "₹115" },
-  { name: "DOLOMET", section: "Tablet", classification: "Pain or Fever", formulation: "Oral Solid", packing: "10x10", mrp: "₹75" },
-  { name: "ZINCOVIT", section: "Tablet", classification: "Multivitamin", formulation: "Oral Solid", packing: "15x10", mrp: "₹130" },
-  { name: "CALDROX-D3", section: "Tablet", classification: "Bone Health", formulation: "Oral Solid", packing: "10x10", mrp: "₹120" },
+  {
+    name: "ACELAR-PLUS",
+    slug: "acelar-plus",
+    section: "Tablet",
+    classification: "Pain Relief",
+    formulation: "Oral Solid",
+    packing: "10x10",
+    mrp: "₹55",
+    description:
+      "ACELAR-PLUS provides fast pain relief and reduces inflammation for muscle and joint pain.",
+    details: [
+      {
+        heading: "Key Ingredients",
+        content:
+          "Contains a blend of anti-inflammatory and analgesic compounds for effective relief.",
+      },
+      {
+        heading: "Dosage",
+        content: "1 tablet twice daily after meals or as directed by a doctor.",
+      },
+    ],
+  },
+  {
+    name: "PANTODOM",
+    slug: "pantodom",
+    section: "Tablet",
+    classification: "Gastrointestinal",
+    formulation: "Oral Solid",
+    packing: "10x10",
+    mrp: "₹68",
+    description:
+      "PANTODOM helps relieve acidity, heartburn, and stomach ulcers effectively.",
+    details: [
+      {
+        heading: "How It Works",
+        content:
+          "Reduces excess acid production by inhibiting proton pumps in the stomach.",
+      },
+      {
+        heading: "Recommended Use",
+        content: "Take before meals once daily or as directed by your doctor.",
+      },
+    ],
+  },
 
   // 🍶 Syrups
-  { name: "OCUCOF-LS", section: "Syrup", classification: "Respiratory", formulation: "Oral Liquid", packing: "100 ml", mrp: "₹89" },
-  { name: "FEVOPLUS", section: "Syrup", classification: "Fever or Cold", formulation: "Oral Liquid", packing: "60 ml", mrp: "₹55" },
-  { name: "LIVOTONE", section: "Syrup", classification: "Liver Tonic", formulation: "Oral Liquid", packing: "200 ml", mrp: "₹125" },
-  { name: "VITATONE", section: "Syrup", classification: "Multivitamin", formulation: "Oral Liquid", packing: "150 ml", mrp: "₹110" },
-  { name: "FERROPLUS", section: "Syrup", classification: "Iron Supplement", formulation: "Oral Liquid", packing: "150 ml", mrp: "₹99" },
-  { name: "KUFEX", section: "Syrup", classification: "Cough or Cold", formulation: "Oral Liquid", packing: "100 ml", mrp: "₹85" },
-  { name: "ANTACID-M", section: "Syrup", classification: "Digestive", formulation: "Oral Liquid", packing: "170 ml", mrp: "₹70" },
+  {
+    name: "OCUCOF-LS",
+    slug: "ocucof-ls",
+    section: "Syrup",
+    classification: "Respiratory",
+    formulation: "Oral Liquid",
+    packing: "100 ml",
+    mrp: "₹89",
+    description:
+      "OCUCOF-LS syrup provides relief from cough and congestion with soothing effects.",
+    details: [
+      {
+        heading: "Benefits",
+        content:
+          "Helps loosen mucus, reduce cough intensity, and clear the respiratory tract.",
+      },
+      {
+        heading: "Precaution",
+        content: "Shake well before use. Store in a cool and dry place.",
+      },
+    ],
+  },
+  {
+    name: "LIVOTONE",
+    slug: "livotone",
+    section: "Syrup",
+    classification: "Liver Tonic",
+    formulation: "Oral Liquid",
+    packing: "200 ml",
+    mrp: "₹125",
+    description:
+      "LIVOTONE is a liver tonic that supports liver function and promotes detoxification.",
+    details: [
+      {
+        heading: "Usage",
+        content: "Take 1–2 teaspoons twice daily after meals or as directed.",
+      },
+      {
+        heading: "Benefits",
+        content: "Improves digestion and strengthens liver health naturally.",
+      },
+    ],
+  },
 
   // 💉 Injectables
-  { name: "CEFTRIAXONE 1GM", section: "Injectables", classification: "Antibiotic", formulation: "Injection", packing: "1 vial", mrp: "₹180" },
-  { name: "DEXAMETHASONE", section: "Injectables", classification: "Steroid", formulation: "Injection", packing: "2 ml", mrp: "₹45" },
-  { name: "B-COMPLEX INJ", section: "Injectables", classification: "Vitamin Supplement", formulation: "Injection", packing: "2 ml", mrp: "₹55" },
-  { name: "PANTOP-40", section: "Injectables", classification: "Gastrointestinal", formulation: "Injection", packing: "1 vial", mrp: "₹95" },
+  {
+    name: "CEFTRIAXONE 1GM",
+    slug: "ceftriaxone-1gm",
+    section: "Injectables",
+    classification: "Antibiotic",
+    formulation: "Injection",
+    packing: "1 vial",
+    mrp: "₹180",
+    description:
+      "CEFTRIAXONE 1GM is a powerful antibiotic used for severe bacterial infections.",
+    details: [
+      {
+        heading: "Indication",
+        content:
+          "Used for treating respiratory, urinary, and skin infections effectively.",
+      },
+      {
+        heading: "Administration",
+        content: "Should be administered intramuscularly or intravenously.",
+      },
+    ],
+  },
 
   // 🧴 Ointments & Lotions
-  { name: "DICLOGEL", section: "Ointments and Lotions", classification: "Pain Relief", formulation: "Topical Gel", packing: "30 g", mrp: "₹78" },
-  { name: "FUNGICREAM", section: "Ointments and Lotions", classification: "Antifungal", formulation: "Topical Cream", packing: "20 g", mrp: "₹65" },
-  { name: "DERMISAL", section: "Ointments and Lotions", classification: "Skin Infection", formulation: "Topical Ointment", packing: "25 g", mrp: "₹72" },
-  { name: "CALAMOIST", section: "Ointments and Lotions", classification: "Moisturizer", formulation: "Lotion", packing: "100 ml", mrp: "₹110" },
-  { name: "PIMCORT", section: "Ointments and Lotions", classification: "Steroid", formulation: "Cream", packing: "20 g", mrp: "₹95" },
+  {
+    name: "DICLOGEL",
+    slug: "diclogel",
+    section: "Ointments and Lotions",
+    classification: "Pain Relief",
+    formulation: "Topical Gel",
+    packing: "30 g",
+    mrp: "₹78",
+    description:
+      "DICLOGEL is a fast-acting pain relief gel for muscle strains and joint pain.",
+    details: [
+      {
+        heading: "How to Apply",
+        content:
+          "Apply on the affected area and massage gently 2–3 times daily.",
+      },
+      {
+        heading: "Caution",
+        content: "Avoid contact with open wounds and eyes.",
+      },
+    ],
+  },
 
   // 🌿 Ayurvedic / Herbal
-  { name: "HERBOLIV", section: "Ayurvedic and Herbal", classification: "Liver Health", formulation: "Syrup", packing: "200 ml", mrp: "₹130" },
-  { name: "TULSI-KUF", section: "Ayurvedic and Herbal", classification: "Cough or Cold", formulation: "Syrup", packing: "100 ml", mrp: "₹85" },
-  { name: "ASHWAGANDHA-CAP", section: "Ayurvedic and Herbal", classification: "Stress Relief", formulation: "Capsule", packing: "60 Caps", mrp: "₹210" },
-  { name: "TRIPHALA-PLUS", section: "Ayurvedic and Herbal", classification: "Digestive Health", formulation: "Powder", packing: "100 g", mrp: "₹95" },
-  { name: "AMLA-RAS", section: "Ayurvedic and Herbal", classification: "Immunity Booster", formulation: "Juice", packing: "500 ml", mrp: "₹160" },
+  {
+    name: "HERBOLIV",
+    slug: "herboliv",
+    section: "Ayurvedic and Herbal",
+    classification: "Liver Health",
+    formulation: "Syrup",
+    packing: "200 ml",
+    mrp: "₹130",
+    description:
+      "HERBOLIV is a natural liver tonic that promotes liver detox and regeneration.",
+    details: [
+      {
+        heading: "Benefits",
+        content:
+          "Enhances liver function and supports digestive wellness using herbal ingredients.",
+      },
+      {
+        heading: "Usage",
+        content: "Consume 10 ml twice daily after meals.",
+      },
+    ],
+  },
 
   // 🧃 Protein / Supplements
-  { name: "PROTIGAIN DHA", section: "Protein Powder with DHA", classification: "Nutritional Supplement", formulation: "Powder", packing: "200 g", mrp: "₹320" },
-  { name: "WHEYMAX", section: "Protein Powder with DHA", classification: "Muscle Gain", formulation: "Powder", packing: "250 g", mrp: "₹450" },
-  { name: "CALPRO DHA", section: "Protein Powder with DHA", classification: "Bone Health", formulation: "Powder", packing: "200 g", mrp: "₹310" }
+  {
+    name: "PROTIGAIN DHA",
+    slug: "protigain-dha",
+    section: "Protein Powder with DHA",
+    classification: "Nutritional Supplement",
+    formulation: "Powder",
+    packing: "200 g",
+    mrp: "₹320",
+    description:
+      "PROTIGAIN DHA provides essential proteins and omega fatty acids for muscle growth and energy.",
+    details: [
+      {
+        heading: "Benefits",
+        content:
+          "Supports muscle recovery, strength building, and overall wellness.",
+      },
+      {
+        heading: "How to Use",
+        content: "Mix 1 scoop with milk or water twice daily.",
+      },
+    ],
+  },
 ];
 
 await Product.deleteMany({});
 await Product.insertMany(sample);
-console.log("Seeded products:", sample.length);
+console.log("✅ Seeded products:", sample.length);
 process.exit();

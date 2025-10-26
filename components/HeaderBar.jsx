@@ -183,7 +183,7 @@ const HeaderBar = () => {
           Visual Aid
         </Link>
 
-        <Link href="#" style={{ color: "#222", textDecoration: "none" }}>
+        <Link href="/contact" style={{ color: "#222", textDecoration: "none" }}>
           Contact
         </Link>
       </nav>

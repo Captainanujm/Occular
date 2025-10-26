@@ -4,8 +4,7 @@ import HeaderBar from "@/components/HeaderBar";
 export default function Home() {
   return (
    <>
-   <TopInfoBar/>
-   <HeaderBar/>
+   
    </>
   );
 }

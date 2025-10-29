@@ -10,7 +10,7 @@ const Page = () => {
   const storeLng = 79.7865;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+   <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-gray-200">
       {/* Header */}
       <LinkHeader text="Contact" path="/contact" />
 

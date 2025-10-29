@@ -18,182 +18,165 @@ export default function ContactForm() {
     setFormData({ ...formData, [name]: value });
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const res = await fetch("http://localhost:5000/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await res.json();
-
-    if (data.success) {
-      alert("✅ Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        location: "",
-        number: "",
-        gst: "",
-        drugLicense: "",
-        lookingFor: "PCD Franchise",
-        message: "",
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    } else {
-      alert("❌ Failed to send message. Try again later.");
-    }
-  } catch (err) {
-    console.error(err);
-    alert("⚠️ Server error. Please try again later.");
-  }
-};
 
+      const data = await res.json();
+
+      if (data.success) {
+        alert("✅ Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          location: "",
+          number: "",
+          gst: "",
+          drugLicense: "",
+          lookingFor: "PCD Franchise",
+          message: "",
+        });
+      } else {
+        alert("❌ Failed to send message. Try again later.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("⚠️ Server error. Please try again later.");
+    }
+  };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-b from-gray-50 to-gray-100 py-10 px-4">
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-2xl bg-white p-8 rounded-2xl shadow-lg border border-gray-200"
-      >
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
-          Contact Us
-        </h2>
+    <form
+      onSubmit={handleSubmit}
+      className="w-full bg-gray-900 text-white p-6 rounded-xl shadow-lg space-y-4"
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+          className="bg-gray-800 text-gray-200 placeholder-gray-400 border border-gray-700 rounded-md p-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          className="bg-gray-800 text-gray-200 placeholder-gray-400 border border-gray-700 rounded-md p-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
+          required
+        />
+        <input
+          type="text"
+          name="number"
+          placeholder="Number"
+          value={formData.number}
+          onChange={handleChange}
+          className="bg-gray-800 text-gray-200 placeholder-gray-400 border border-gray-700 rounded-md p-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
+        />
+        <input
+          type="text"
+          name="location"
+          placeholder="Location"
+          value={formData.location}
+          onChange={handleChange}
+          className="bg-gray-800 text-gray-200 placeholder-gray-400 border border-gray-700 rounded-md p-2 focus:ring-2 focus:ring-teal-400 focus:outline-none"
+        />
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-red-400 focus:outline-none"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-red-400 focus:outline-none"
-            required
-          />
-          <input
-            type="text"
-            name="location"
-            placeholder="Location"
-            value={formData.location}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-red-400 focus:outline-none"
-          />
-          <input
-            type="tel"
-            name="number"
-            placeholder="Phone Number"
-            value={formData.number}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-red-400 focus:outline-none"
-          />
-        </div>
-
-        {/* Radio Groups */}
-        <div className="flex flex-wrap justify-between mt-6 gap-6">
-          <div className="flex-1 min-w-[200px]">
-            <label className="font-medium text-gray-700 block mb-2">
-              GST Number
+      {/* Radio Buttons */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300 mt-2">
+        <div>
+          <p className="text-sm font-medium mb-1">GST Number</p>
+          <div className="flex items-center gap-4 text-sm">
+            <label className="flex items-center gap-1">
+              <input
+                type="radio"
+                name="gst"
+                value="Yes"
+                onChange={handleChange}
+              />
+              Yes
             </label>
-            <div className="flex gap-6 text-gray-700">
-              <label className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  name="gst"
-                  value="Yes"
-                  onChange={handleChange}
-                />
-                Yes
-              </label>
-              <label className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  name="gst"
-                  value="No"
-                  onChange={handleChange}
-                />
-                No
-              </label>
-            </div>
-          </div>
-
-          <div className="flex-1 min-w-[200px]">
-            <label className="font-medium text-gray-700 block mb-2">
-              Drug License
+            <label className="flex items-center gap-1">
+              <input
+                type="radio"
+                name="gst"
+                value="No"
+                onChange={handleChange}
+              />
+              No
             </label>
-            <div className="flex gap-6 text-gray-700">
-              <label className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  name="drugLicense"
-                  value="Yes"
-                  onChange={handleChange}
-                />
-                Yes
-              </label>
-              <label className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  name="drugLicense"
-                  value="No"
-                  onChange={handleChange}
-                />
-                No
-              </label>
-            </div>
           </div>
         </div>
 
-        {/* Select Field */}
-        <div className="mt-6">
-          <label className="font-medium text-gray-700 block mb-2">
-            Looking For
-          </label>
-          <select
-            name="lookingFor"
-            value={formData.lookingFor}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-red-400 focus:outline-none"
-          >
-            <option value="PCD Franchise">PCD Franchise</option>
-            <option value="Third Party Manufacturing">
-              Third Party Manufacturing
-            </option>
-            <option value="Other">Other</option>
-          </select>
+        <div>
+          <p className="text-sm font-medium mb-1">Drug License</p>
+          <div className="flex items-center gap-4 text-sm">
+            <label className="flex items-center gap-1">
+              <input
+                type="radio"
+                name="drugLicense"
+                value="Yes"
+                onChange={handleChange}
+              />
+              Yes
+            </label>
+            <label className="flex items-center gap-1">
+              <input
+                type="radio"
+                name="drugLicense"
+                value="No"
+                onChange={handleChange}
+              />
+              No
+            </label>
+          </div>
         </div>
+      </div>
 
-        {/* Message Field */}
-        <div className="mt-6">
-          <label className="font-medium text-gray-700 block mb-2">
-            Your Message
-          </label>
-          <textarea
-            name="message"
-            placeholder="Type your message here..."
-            value={formData.message}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg p-3 w-full h-32 resize-none focus:ring-2 focus:ring-red-400 focus:outline-none"
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="mt-8 w-full bg-red-500 hover:bg-red-600 text-white font-medium py-3 rounded-lg transition-all duration-200"
+      {/* Dropdown */}
+      <div>
+        <p className="text-sm font-medium mb-1">Looking For</p>
+        <select
+          name="lookingFor"
+          value={formData.lookingFor}
+          onChange={handleChange}
+          className="bg-gray-800 text-gray-200 border border-gray-700 rounded-md p-2 w-full focus:ring-2 focus:ring-teal-400 focus:outline-none"
         >
-          Send Message
-        </button>
-      </form>
-    </div>
+          <option value="PCD Franchise">PCD Franchise</option>
+          <option value="Third Party Manufacturing">
+            Third Party Manufacturing
+          </option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      {/* Message */}
+      <textarea
+        name="message"
+        placeholder="Message"
+        value={formData.message}
+        onChange={handleChange}
+        className="bg-gray-800 text-gray-200 placeholder-gray-400 border border-gray-700 rounded-md p-2 w-full h-24 resize-none focus:ring-2 focus:ring-teal-400 focus:outline-none"
+      />
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="w-full bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 rounded-md transition-all duration-200"
+      >
+        Send
+      </button>
+    </form>
   );
 }

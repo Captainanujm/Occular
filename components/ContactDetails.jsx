@@ -1,52 +1,52 @@
 "use client";
 import React from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Clock } from "lucide-react";
 
 export default function ContactDetails() {
   return (
-    <div className="flex-1 w-full bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-      <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center md:text-left">
-        Contact Details
+    <div className="flex-1 w-full bg-gray-900 text-gray-200 p-6 rounded-xl shadow-md">
+      <h2 className="text-2xl font-semibold mb-5 text-white border-b border-gray-700 pb-2">
+        Our Address
       </h2>
 
-      <div className="space-y-6 text-gray-700">
+      <div className="space-y-5">
         {/* Address */}
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0">
-            <MapPin className="text-red-500 w-6 h-6 mt-1" />
-          </div>
-          <p className="leading-relaxed">
+        <div className="flex items-start gap-3">
+          <MapPin className="text-teal-400 w-5 h-5 mt-1 flex-shrink-0" />
+          <p className="text-sm leading-relaxed">
             Plot No 203, 2nd Floor, Industrial Area, Phase 2, Panchkula, Haryana
             134113, India
           </p>
         </div>
 
         {/* Phone */}
-        <div className="flex items-center gap-4">
-          <Phone className="text-red-500 w-6 h-6" />
+        <div className="flex items-center gap-3">
+          <Phone className="text-teal-400 w-5 h-5 flex-shrink-0" />
           <a
             href="tel:+919896713447"
-            className="text-gray-800 font-medium hover:text-red-600 transition-all"
+            className="text-gray-300 text-sm hover:text-white transition-all"
           >
             +91-9896713447
           </a>
         </div>
 
         {/* Email */}
-        <div className="flex items-center gap-4">
-          <Mail className="text-red-500 w-6 h-6" />
+        <div className="flex items-center gap-3">
+          <Mail className="text-teal-400 w-5 h-5 flex-shrink-0" />
           <a
             href="mailto:medlockhealthcare@gmail.com"
-            className="text-gray-800 font-medium hover:text-red-600 transition-all"
+            className="text-gray-300 text-sm hover:text-white transition-all break-all"
           >
             medlockhealthcare@gmail.com
           </a>
         </div>
 
-        {/* Optional: Working Hours */}
-        <div className="pt-2 border-t border-gray-100 mt-4">
-          <p className="text-gray-600 text-sm">
-            <strong>Working Hours:</strong> Mon–Sat, 9:00 AM – 6:00 PM
+        {/* Working Hours */}
+        <div className="flex items-center gap-3 border-t border-gray-800 pt-4 mt-3">
+          <Clock className="text-teal-400 w-5 h-5 flex-shrink-0" />
+          <p className="text-sm text-gray-400">
+            <strong className="text-gray-300">Working Hours:</strong>{" "}
+            Mon–Sat, 9:00 AM – 6:00 PM
           </p>
         </div>
       </div>

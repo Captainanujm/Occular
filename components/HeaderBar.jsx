@@ -6,7 +6,7 @@ import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const HeaderBar = () => {
@@ -14,215 +14,107 @@ const HeaderBar = () => {
 
   return (
     <header
-      className={poppins.className}
-      style={{
-        width: "100%",
-        backgroundColor: "#fff",
-        boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-        padding: "10px 40px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        border: "1px solid #ddd",
-        boxSizing: "border-box",
-        height: "90px",
-        position: "sticky",
-        top: 0,
-        zIndex: 50,
-      }}
+      className={`${poppins.className} sticky top-0 z-50 bg-[#0f172a] border-b border-gray-800 shadow-md`}
     >
-      {/* Left: Logo */}
-      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-        <img
-          src="/Logo_image.jpg"
-          alt="Occular Logo"
-          width="90"
-          height="90"
-          style={{ objectFit: "contain" }}
-        />
-        <h1
-          style={{
-            fontSize: "24px",
-            fontWeight: "700",
-            color: "#0074b7",
-            marginLeft: "8px",
-          }}
-        >
-          Occular
-        </h1>
-      </div>
-
-      {/* Center: Navigation Menu */}
-      <nav
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "30px",
-          fontSize: "15px",
-          fontWeight: "500",
-          textTransform: "uppercase",
-          position: "relative",
-        }}
-      >
-        <Link href="/" style={{ color: "#0074b7", textDecoration: "none" }}>
-          Home
-        </Link>
-
-        <Link
-          href="#"
-          style={{
-            color: "#222",
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            gap: "5px",
-          }}
-        >
-          About Us <ChevronDown size={16} />
-        </Link>
-
-        <Link
-          href="#"
-          style={{
-            color: "#222",
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            gap: "5px",
-          }}
-        >
-          Facility <ChevronDown size={16} />
-        </Link>
-
-        {/* PRODUCTS MENU WITH DROPDOWN */}
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            alignItems: "center",
-            cursor: "pointer",
-          }}
-          onMouseEnter={() => setOpenMenu(true)}
-          onMouseLeave={() => setOpenMenu(false)}
-        >
-          <span
-            style={{
-              color: "#222",
-              display: "flex",
-              alignItems: "center",
-              gap: "5px",
-              textDecoration: "none",
-            }}
-          >
-            Products <ChevronDown size={16} />
-          </span>
-
-          {/* Dropdown */}
-          {openMenu && (
-            <ul
-              style={{
-                position: "absolute",
-                top: "100%",
-                left: 0,
-                backgroundColor: "#fff",
-                border: "1px solid #ddd",
-                borderRadius: "6px",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-                listStyle: "none",
-                margin: 0,
-                padding: "10px 0",
-                width: "200px",
-                zIndex: 1000,
-              }}
-            >
-              <li style={{ padding: "8px 16px" }}>
-                <Link
-                  href="/products/all-products"
-                  style={{
-                    color: "#333",
-                    textDecoration: "none",
-                    display: "block",
-                  }}
-                >
-                  All Products
-                </Link>
-              </li>
-              <li style={{ padding: "8px 16px" }}>
-                <Link
-                  href="/products/sections"
-                  style={{
-                    color: "#333",
-                    textDecoration: "none",
-                    display: "block",
-                  }}
-                >
-                  Section Wise
-                </Link>
-              </li>
-              <li style={{ padding: "8px 16px" }}>
-                <Link
-                  href="/products/classifications"
-                  style={{
-                    color: "#333",
-                    textDecoration: "none",
-                    display: "block",
-                  }}
-                >
-                  Category Wise
-                </Link>
-              </li>
-            </ul>
-          )}
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        {/* Left: Logo */}
+        <div className="flex items-center gap-3">
+          <img
+            src="/Logo_image.jpg"
+            alt="Occular Logo"
+            className="w-14 h-14 object-contain rounded-full border border-teal-400/30"
+          />
+          <h1 className="text-2xl font-bold text-teal-400 tracking-tight">
+            Occular
+          </h1>
         </div>
 
-        <Link href="#" style={{ color: "#222", textDecoration: "none" }}>
-          Track Order
-        </Link>
+        {/* Center: Navigation */}
+        <nav className="hidden md:flex items-center gap-6 text-[15px] font-medium">
+          <Link
+            href="/"
+            className="text-teal-400 hover:text-teal-300 transition-colors duration-200"
+          >
+            Home
+          </Link>
 
-        <Link href="#" style={{ color: "#222", textDecoration: "none" }}>
-          Visual Aid
-        </Link>
+          <Link
+            href="#"
+            className="flex items-center gap-1 text-gray-300 hover:text-teal-400 transition-all"
+          >
+            About Us <ChevronDown size={16} />
+          </Link>
 
-        <Link href="/contact" style={{ color: "#222", textDecoration: "none" }}>
-          Contact
-        </Link>
-      </nav>
+          <Link
+            href="#"
+            className="flex items-center gap-1 text-gray-300 hover:text-teal-400 transition-all"
+          >
+            Facility <ChevronDown size={16} />
+          </Link>
 
-      {/* Right: Search */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          border: "1px solid #ccc",
-          borderRadius: "4px",
-          overflow: "hidden",
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Search..."
-          style={{
-            padding: "8px 12px",
-            border: "none",
-            outline: "none",
-            width: "200px",
-            fontFamily: "inherit",
-          }}
-        />
-        <button
-          style={{
-            backgroundColor: "#000",
-            color: "white",
-            padding: "8px 10px",
-            border: "none",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Search size={18} />
-        </button>
+          {/* Dropdown Menu */}
+          <div
+            className="relative"
+            onMouseEnter={() => setOpenMenu(true)}
+            onMouseLeave={() => setOpenMenu(false)}
+          >
+            <span className="flex items-center gap-1 text-gray-300 hover:text-teal-400 cursor-pointer transition-all">
+              Products <ChevronDown size={16} />
+            </span>
+
+            {openMenu && (
+              <ul className="absolute top-full left-0 w-48 mt-2 bg-[#1e293b] border border-gray-700 rounded-xl shadow-lg overflow-hidden">
+                {[
+                  { href: "/products/all-products", label: "All Products" },
+                  { href: "/products/sections", label: "Section Wise" },
+                  { href: "/products/classifications", label: "Category Wise" },
+                ].map((item, i) => (
+                  <li key={i}>
+                    <Link
+                      href={item.href}
+                      className="block px-4 py-2 text-gray-200 hover:bg-[#0f172a] hover:text-teal-400 transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          <Link
+            href="#"
+            className="text-gray-300 hover:text-teal-400 transition-colors"
+          >
+            Track Order
+          </Link>
+
+          <Link
+            href="#"
+            className="text-gray-300 hover:text-teal-400 transition-colors"
+          >
+            Visual Aid
+          </Link>
+
+          <Link
+            href="/contact"
+            className="text-gray-300 hover:text-teal-400 transition-colors"
+          >
+            Contact
+          </Link>
+        </nav>
+
+        {/* Right: Search */}
+        <div className="hidden md:flex items-center border border-gray-700 rounded-full overflow-hidden focus-within:ring-2 focus-within:ring-teal-400 transition-all duration-200">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="px-4 py-2 outline-none border-none bg-transparent text-gray-200 placeholder-gray-500 text-sm w-48"
+          />
+          <button className="bg-teal-500 text-white px-3 py-2 hover:bg-teal-400 transition-colors flex items-center justify-center">
+            <Search size={18} />
+          </button>
+        </div>
       </div>
     </header>
   );

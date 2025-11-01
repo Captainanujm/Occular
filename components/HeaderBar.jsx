@@ -90,7 +90,7 @@ const HeaderBar = () => {
           </Link>
 
           <Link
-            href="#"
+            href="/visual-aid"
             className="text-gray-300 hover:text-teal-400 transition-colors"
           >
             Visual Aid

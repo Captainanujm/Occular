@@ -15,7 +15,7 @@ async function getProduct(slug) {
 
 
 export default async function ProductPage({ params }) {
-  const { slug } = await params;
+  const { slug } =await params;
   const product = await getProduct(slug);
 
   if (!product)

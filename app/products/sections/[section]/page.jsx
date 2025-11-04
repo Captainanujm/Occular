@@ -8,7 +8,6 @@ export default function ProductSectionPage() {
   const api = process.env.NEXT_PUBLIC_API_URL;
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-const createSlug = (name) => name.toLowerCase().replace(/\s+/g, "-");
   useEffect(() => {
     if (!section) return;
 
@@ -39,7 +38,7 @@ const createSlug = (name) => name.toLowerCase().replace(/\s+/g, "-");
           {products.map((p) => (
              <Link
             key={p._id}
-            href={`/products/${createSlug(p.name)}`}
+             href={`/products/${p.slug}`}
             className="block group"
           >
             <ProductCard product={p} />

@@ -7,7 +7,6 @@ export default function CategoriesPage() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    // Fetch all classification-wise categories from backend
     fetch(`${api}/api/products/classifications`)
       .then((res) => res.json())
       .then(setCategories)
@@ -15,23 +14,44 @@ export default function CategoriesPage() {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center text-cyan-700 mb-8">
-        Category Wise Products
-      </h1>
+    <div className="min-h-screen bg-[#0f1d1f] py-14 px-6">
+      <div className="max-w-6xl mx-auto">
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        {/* Page Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-semibold text-teal-300 tracking-wide">
+            Category Wise Products
+          </h1>
+          <p className="text-gray-300 max-w-2xl mx-auto mt-3 text-sm">
+            Browse pharmaceuticals grouped by therapeutic classification.
+          </p>
+        </div>
+
+        {/* Categories Grid */}
         {categories.length > 0 ? (
-          categories.map((classification) => (
-            <GridCard
-              key={classification}
-              title={classification}
-              link={`/products/classifications/${encodeURIComponent(classification)}`}
-            />
-          ))
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            {categories.map((classification) => (
+              <div
+                key={classification}
+                className="transform transition-all duration-300 hover:scale-[1.04] hover:shadow-xl hover:shadow-teal-800/40 rounded-xl"
+              >
+                <div className="bg-[#122728] border border-teal-600/30 rounded-xl p-4 hover:border-teal-400/60 transition-colors">
+                  <GridCard
+                    title={classification}
+                    link={`/products/classifications/${encodeURIComponent(classification)}`}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         ) : (
-          <p className="text-center text-gray-500">No categories found.</p>
+          <p className="text-center text-gray-400 mt-10">
+            No categories found.
+          </p>
         )}
+
+        {/* Decorative Divider */}
+        <div className="mt-16 h-1 w-full bg-gradient-to-r from-transparent via-teal-500/40 to-transparent opacity-40"></div>
       </div>
     </div>
   );

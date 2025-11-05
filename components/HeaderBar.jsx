@@ -19,11 +19,11 @@ const HeaderBar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Left: Logo */}
         <div className="flex items-center gap-3">
-          <img
-            src="/Logo_image.jpg"
-            alt="Occular Logo"
-            className="w-14 h-14 object-contain rounded-full border border-teal-400/30"
-          />
+        <img
+  src="/Logo_image.jpg"
+  alt="Occular Logo"
+  className="w-14 h-14 rounded-full object-cover border-2 border-teal-400 shadow-teal-400/40 shadow-sm"
+/>
           <h1 className="text-2xl font-bold text-teal-400 tracking-tight">
             Occular
           </h1>

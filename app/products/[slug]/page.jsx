@@ -4,62 +4,73 @@ import Image from "next/image";
 async function getProduct(slug) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/products/${slug}`,
-    { cache: "no-store" } // always fetch fresh data
+    { cache: "no-store" }
   );
 
-  if (!res.ok) return null; // handle 404 or server error
-
-  const data = await res.json();
-  return data;
+  if (!res.ok) return null;
+  return await res.json();
 }
 
-
 export default async function ProductPage({ params }) {
-  const { slug } =await params;
+  const { slug } = await params;
   const product = await getProduct(slug);
 
   if (!product)
-    return <div className="p-10 text-center text-red-600">Product not found.</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#0f1d1f] text-red-400 text-lg">
+        Product not found.
+      </div>
+    );
 
   return (
-    <div className="p-8 max-w-3xl mx-auto bg-white shadow-md rounded-xl">
-      <h1 className="text-3xl font-bold text-cyan-700 mb-4">{product.name}</h1>
+    <div className="min-h-screen bg-[#0f1d1f] py-14 px-6">
+      <div className="max-w-4xl mx-auto bg-[#122728] border border-teal-700/40 shadow-xl shadow-black/30 rounded-2xl p-8 text-gray-200">
 
-      {product.image && (
-        <Image
-          src={product.image}
-          alt={product.name}
-          width={400}
-          height={400}
-          className="rounded-lg mb-6"
-        />
-      )}
+        {/* Product Name */}
+        <h1 className="text-4xl font-semibold text-teal-300 tracking-wide">
+          {product.name}
+        </h1>
 
-      <p className="text-gray-700 mb-4">{product.description}</p>
+        {/* Image */}
+        {product.image && (
+          <div className="mt-6 flex justify-center">
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={500}
+              height={500}
+              className="rounded-xl border border-teal-600/40 shadow-lg"
+            />
+          </div>
+        )}
 
-      {/* Dynamic Headings + Content */}
-      {product.details?.map((section, i) => (
-        <div key={i} className="mt-6">
-          <h2 className="text-xl font-semibold text-cyan-700">
-            {section.heading}
-          </h2>
-          <p className="text-gray-700 mt-2">{section.content}</p>
+        {/* Description */}
+        <p className="text-gray-300 mt-6 leading-relaxed">
+          {product.description}
+        </p>
+
+        {/* Dynamic Sections */}
+        {product.details?.map((section, i) => (
+          <div key={i} className="mt-10">
+            <h2 className="text-2xl font-medium text-teal-300">
+              {section.heading}
+            </h2>
+            <p className="text-gray-300 mt-3 leading-relaxed">
+              {section.content}
+            </p>
+          </div>
+        ))}
+
+        {/* Divider */}
+        <div className="mt-12 h-0.5 w-full bg-gradient-to-r from-transparent via-teal-500/50 to-transparent" />
+
+        {/* Metadata */}
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <p><span className="text-teal-300 font-medium">Section:</span> {product.section}</p>
+          <p><span className="text-teal-300 font-medium">Classification:</span> {product.classification}</p>
+          <p><span className="text-teal-300 font-medium">Packing:</span> {product.packing}</p>
+          <p><span className="text-teal-300 font-medium">MRP:</span> {product.mrp}</p>
         </div>
-      ))}
-
-      <div className="mt-10 border-t pt-4 text-sm text-gray-500">
-        <p>
-          <strong>Section:</strong> {product.section}
-        </p>
-        <p>
-          <strong>Classification:</strong> {product.classification}
-        </p>
-        <p>
-          <strong>Packing:</strong> {product.packing}
-        </p>
-        <p>
-          <strong>MRP:</strong> {product.mrp}
-        </p>
       </div>
     </div>
   );

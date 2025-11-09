@@ -44,6 +44,7 @@ export const getProductBySlug = async (req, res) => {
     // Find directly using the slug field
     const product = await Product.findOne({ slug });
 
+
     if (!product) {
       return res.status(404).json({ message: "Product not found" });
     }

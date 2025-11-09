@@ -32,7 +32,7 @@ export default function AllProducts() {
           {products.map((p) => (
             <Link
               key={p._id}
-              href={`/products/${createSlug(p.name)}`}
+             href={`/products/${p.slug}`}
               className="transform transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-teal-800/40 rounded-xl"
             >
               <div className="bg-[#122728] border border-teal-600/30 rounded-xl p-3 hover:border-teal-400/60 transition-colors">

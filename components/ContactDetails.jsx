@@ -37,7 +37,7 @@ export default function ContactDetails() {
             href="mailto:medlockhealthcare@gmail.com"
             className="text-gray-300 text-sm hover:text-white transition-all break-all"
           >
-            medlockhealthcare@gmail.com
+           occularpharma1982@gmail.com
           </a>
         </div>
 

@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
@@ -49,9 +50,12 @@ const HeroCarousel = () => {
           </p>
 
           {/* Updated Button with Medical Theme */}
-          <button className="bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md transition-all duration-300">
+          <Link href="/products/all-products">
+            <button className=" cursor-pointer bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md transition-all duration-300">
             Shop Medicines
           </button>
+          </Link>
+        
         </div>
       </div>
 

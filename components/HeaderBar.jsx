@@ -29,7 +29,7 @@ const HeaderBar = () => {
         {/* Logo + Title */}
         <div className="flex items-center gap-2">
           <img
-            src="/logo_image.jpg"
+            src="/Logo_image.jpg"
             alt="Occular Logo"
             className="w-10 h-10 md:w-14 md:h-14 rounded-full object-cover border-2 border-teal-400 shadow-teal-400/40 shadow-sm"
           />

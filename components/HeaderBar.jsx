@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Search, ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -10,29 +11,36 @@ const poppins = Poppins({
 });
 
 const HeaderBar = () => {
+  const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isActive = (path) =>
+    pathname === path ? "text-teal-400" : "text-gray-300";
+
+  const closeMobileMenu = () => setMobileOpen(false);
 
   return (
     <header
       className={`${poppins.className} sticky top-0 z-50 bg-[#0f172a] border-b border-gray-800 shadow-md`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo */}
-        <div className="flex items-center gap-3">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 md:py-4">
+
+        {/* Logo + Title */}
+        <div className="flex items-center gap-2">
           <img
-            src="/Logo_image.jpg"
+            src="/logo_image.jpg"
             alt="Occular Logo"
-            className="w-14 h-14 rounded-full object-cover border-2 border-teal-400 shadow-teal-400/40 shadow-sm"
+            className="w-10 h-10 md:w-14 md:h-14 rounded-full object-cover border-2 border-teal-400 shadow-teal-400/40 shadow-sm"
           />
-          <h1 className="text-2xl font-bold text-teal-400 tracking-tight">
+          <h1 className="text-xl md:text-2xl font-bold text-teal-400 tracking-tight">
             Occular
           </h1>
         </div>
 
         {/* Desktop Navbar */}
         <nav className="hidden md:flex items-center gap-6 text-[15px] font-medium">
-          <Link href="/" className="text-teal-400 hover:text-teal-300 transition">
+          <Link href="/" className={`${isActive("/")} hover:text-teal-300 transition`}>
             Home
           </Link>
 
@@ -74,15 +82,15 @@ const HeaderBar = () => {
             )}
           </div>
 
-          <Link href="#" className="text-gray-300 hover:text-teal-400">
+          <Link href="#" className={`${isActive("/track-order")} hover:text-teal-400`}>
             Track Order
           </Link>
 
-          <Link href="/visual-aid" className="text-gray-300 hover:text-teal-400">
+          <Link href="/visual-aid" className={`${isActive("/visual-aid")} hover:text-teal-400`}>
             Visual Aid
           </Link>
 
-          <Link href="/contact" className="text-gray-300 hover:text-teal-400">
+          <Link href="/contact" className={`${isActive("/contact")} hover:text-teal-400`}>
             Contact
           </Link>
         </nav>
@@ -108,47 +116,53 @@ const HeaderBar = () => {
         </button>
       </div>
 
-      {/* Mobile Slide Down Menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-[#0f172a] border-t border-gray-800 px-6 py-4 space-y-4">
-          <Link href="/" className="block text-gray-200 hover:text-teal-400">
-            Home
-          </Link>
-          <Link href="#" className="block text-gray-200 hover:text-teal-400">
-            About Us
-          </Link>
-          <Link href="#" className="block text-gray-200 hover:text-teal-400">
-            Facility
-          </Link>
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden bg-[#0f172a] border-t border-gray-800 px-6 transition-all duration-300 overflow-hidden ${
+          mobileOpen ? "max-h-screen py-3" : "max-h-0 py-0"
+        }`}
+      >
+        <Link href="/" onClick={closeMobileMenu} className={`block py-3 border-b border-gray-800 ${isActive("/")}`}>
+          Home
+        </Link>
 
-          <details className="group">
-            <summary className="text-gray-200 hover:text-teal-400 cursor-pointer">
-              Products
-            </summary>
-            <div className="pl-4 mt-2 space-y-2">
-              <Link href="/products/all-products" className="block text-gray-300 hover:text-teal-400">
-                All Products
-              </Link>
-              <Link href="/products/sections" className="block text-gray-300 hover:text-teal-400">
-                Section Wise
-              </Link>
-              <Link href="/products/classifications" className="block text-gray-300 hover:text-teal-400">
-                Category Wise
-              </Link>
-            </div>
-          </details>
+        <Link href="#" className="block py-3 border-b border-gray-800 text-gray-300">
+          About Us
+        </Link>
 
-          <Link href="#" className="block text-gray-200 hover:text-teal-400">
-            Track Order
-          </Link>
-          <Link href="/visual-aid" className="block text-gray-200 hover:text-teal-400">
-            Visual Aid
-          </Link>
-          <Link href="/contact" className="block text-gray-200 hover:text-teal-400">
-            Contact
-          </Link>
-        </div>
-      )}
+        <Link href="#" className="block py-3 border-b border-gray-800 text-gray-300">
+          Facility
+        </Link>
+
+        <details className="group border-b border-gray-800 py-2">
+          <summary className="cursor-pointer text-gray-300 py-2">
+            Products
+          </summary>
+          <div className="pl-4 mt-1 space-y-1">
+            <Link href="/products/all-products" onClick={closeMobileMenu} className="block text-gray-400 hover:text-teal-400 py-1">
+              All Products
+            </Link>
+            <Link href="/products/sections" onClick={closeMobileMenu} className="block text-gray-400 hover:text-teal-400 py-1">
+              Section Wise
+            </Link>
+            <Link href="/products/classifications" onClick={closeMobileMenu} className="block text-gray-400 hover:text-teal-400 py-1">
+              Category Wise
+            </Link>
+          </div>
+        </details>
+
+        <Link href="#" className="block py-3 border-b border-gray-800 text-gray-300">
+          Track Order
+        </Link>
+
+        <Link href="/visual-aid" onClick={closeMobileMenu} className={`block py-3 border-b border-gray-800 ${isActive("/visual-aid")}`}>
+          Visual Aid
+        </Link>
+
+        <Link href="/contact" onClick={closeMobileMenu} className={`block py-3 ${isActive("/contact")}`}>
+          Contact
+        </Link>
+      </div>
     </header>
   );
 };

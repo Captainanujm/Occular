@@ -6,7 +6,6 @@ import Link from "next/link";
 export default function AllProducts() {
   const api = process.env.NEXT_PUBLIC_API_URL;
   const [products, setProducts] = useState([]);
-  const createSlug = (name) => name.toLowerCase().replace(/\s+/g, "-");
 
   useEffect(() => {
     fetch(`${api}/api/products`)

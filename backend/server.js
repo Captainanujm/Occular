@@ -9,11 +9,7 @@ dotenv.config();
 await connectDB();
 
 const app = express();
-app.use(cors({
-  origin: "https://occular-eqdo.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/products", productRoutes);

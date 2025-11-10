@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -7,8 +8,8 @@ export default function ContactForm() {
     email: "",
     location: "",
     number: "",
-    gst: "",
-    drugLicense: "",
+    gst: "No",
+    drugLicense: "No",
     lookingFor: "PCD Franchise",
     message: "",
   });
@@ -18,56 +19,51 @@ export default function ContactForm() {
     setFormData({ ...formData, [name]: value });
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  console.log("Submitting form with data:", formData);
-  console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
-
-  if (!process.env.NEXT_PUBLIC_API_URL) {
-    alert("❌ API URL is missing! Set NEXT_PUBLIC_API_URL in Vercel Environment Variables.");
-    return;
-  }
-
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    console.log("Response Status:", res.status);
-    
-    if (!res.ok) {
-      alert(`❌ Server returned status ${res.status}. Check backend logs.`);
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill in Name, Email, and Message fields.");
       return;
     }
 
-    const data = await res.json();
-    console.log("Response Data:", data);
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.number || "N/A",
+        location: formData.location || "N/A",
+        gst: formData.gst,
+        drugLicense: formData.drugLicense,
+        lookingFor: formData.lookingFor,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      };
 
-    if (data.success) {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
       alert("✅ Message sent successfully!");
       setFormData({
         name: "",
         email: "",
         location: "",
         number: "",
-        gst: "",
-        drugLicense: "",
+        gst: "No",
+        drugLicense: "No",
         lookingFor: "PCD Franchise",
         message: "",
       });
-    } else {
-      alert("❌ Message failed. Server responded but did not confirm success.");
+    } catch (err) {
+      console.error("EmailJS Error:", err);
+      alert("❌ Failed to send message. Check console for details.");
     }
-
-  } catch (err) {
-    console.error("Fetch Error:", err);
-    alert("⚠️ Network or Server error. Check Console for details.");
-  }
-};
-
+  };
 
   return (
     <form
@@ -116,48 +112,36 @@ export default function ContactForm() {
         <div>
           <p className="text-sm font-medium mb-1">GST Number</p>
           <div className="flex items-center gap-4 text-sm">
-            <label className="flex items-center gap-1">
-              <input
-                type="radio"
-                name="gst"
-                value="Yes"
-                onChange={handleChange}
-              />
-              Yes
-            </label>
-            <label className="flex items-center gap-1">
-              <input
-                type="radio"
-                name="gst"
-                value="No"
-                onChange={handleChange}
-              />
-              No
-            </label>
+            {["Yes", "No"].map((val) => (
+              <label key={val} className="flex items-center gap-1">
+                <input
+                  type="radio"
+                  name="gst"
+                  value={val}
+                  checked={formData.gst === val}
+                  onChange={handleChange}
+                />
+                {val}
+              </label>
+            ))}
           </div>
         </div>
 
         <div>
           <p className="text-sm font-medium mb-1">Drug License</p>
           <div className="flex items-center gap-4 text-sm">
-            <label className="flex items-center gap-1">
-              <input
-                type="radio"
-                name="drugLicense"
-                value="Yes"
-                onChange={handleChange}
-              />
-              Yes
-            </label>
-            <label className="flex items-center gap-1">
-              <input
-                type="radio"
-                name="drugLicense"
-                value="No"
-                onChange={handleChange}
-              />
-              No
-            </label>
+            {["Yes", "No"].map((val) => (
+              <label key={val} className="flex items-center gap-1">
+                <input
+                  type="radio"
+                  name="drugLicense"
+                  value={val}
+                  checked={formData.drugLicense === val}
+                  onChange={handleChange}
+                />
+                {val}
+              </label>
+            ))}
           </div>
         </div>
       </div>
@@ -172,9 +156,7 @@ export default function ContactForm() {
           className="bg-gray-800 text-gray-200 border border-gray-700 rounded-md p-2 w-full focus:ring-2 focus:ring-teal-400 focus:outline-none"
         >
           <option value="PCD Franchise">PCD Franchise</option>
-          <option value="Third Party Manufacturing">
-            Third Party Manufacturing
-          </option>
+          <option value="Third Party Manufacturing">Third Party Manufacturing</option>
           <option value="Other">Other</option>
         </select>
       </div>

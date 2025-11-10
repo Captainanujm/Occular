@@ -10,7 +10,7 @@ await connectDB();
 const app = express();
 app.use(cors({
   origin: [
-    "https://occular-d25y.vercel.app", // deployed frontend
+    "https://occular-d25y-kxg0jqf9d-captainanuj2004-9288s-projects.vercel.app/", // deployed frontend
     "http://localhost:3000"           // local frontend
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],

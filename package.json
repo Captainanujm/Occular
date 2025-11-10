@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
     "ioredis": "^5.8.2",
     "leaflet": "^1.9.4",
     "leaflet-routing-machine": "^3.2.12",

@@ -19,21 +19,16 @@ export const sendContactMail = async (req, res) => {
     }
 
     // Configure transporter
-   const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST, // e.g., smtp.gmail.com
-  port: 587,                    // Must be 587 for Render
-  secure: false,                // false = STARTTLS
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS, // App Password for Gmail
-  },
-  tls: {
-    rejectUnauthorized: false,   // prevents cert errors
-  },
-  connectionTimeout: 10000,      // 10s
-  greetingTimeout: 10000,
-  socketTimeout: 10000,
-});
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      secure: false,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
     // Email content
     const mailOptions = {
       from: `"${name} (Website Inquiry)" <${process.env.SMTP_USER}>`,

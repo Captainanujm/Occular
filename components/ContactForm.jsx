@@ -18,38 +18,56 @@ export default function ContactForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+  console.log("Submitting form with data:", formData);
+  console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
 
-      const data = await res.json();
+  if (!process.env.NEXT_PUBLIC_API_URL) {
+    alert("❌ API URL is missing! Set NEXT_PUBLIC_API_URL in Vercel Environment Variables.");
+    return;
+  }
 
-      if (data.success) {
-        alert("✅ Message sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          location: "",
-          number: "",
-          gst: "",
-          drugLicense: "",
-          lookingFor: "PCD Franchise",
-          message: "",
-        });
-      } else {
-        alert("❌ Failed to send message. Try again later.");
-      }
-    } catch (err) {
-      console.error(err);
-      alert("⚠️ Server error. Please try again later.");
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    console.log("Response Status:", res.status);
+    
+    if (!res.ok) {
+      alert(`❌ Server returned status ${res.status}. Check backend logs.`);
+      return;
     }
-  };
+
+    const data = await res.json();
+    console.log("Response Data:", data);
+
+    if (data.success) {
+      alert("✅ Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        location: "",
+        number: "",
+        gst: "",
+        drugLicense: "",
+        lookingFor: "PCD Franchise",
+        message: "",
+      });
+    } else {
+      alert("❌ Message failed. Server responded but did not confirm success.");
+    }
+
+  } catch (err) {
+    console.error("Fetch Error:", err);
+    alert("⚠️ Network or Server error. Check Console for details.");
+  }
+};
+
 
   return (
     <form

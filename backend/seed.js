@@ -9,7 +9,7 @@ export const sample = [
   {
     "name": "Ocfylin-100",
     "slug": "ocfylin-100",
-    "image": "/OCFYLIN-100.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/OCFYLIN-100_uljiil",
     "section": "Capsule",
     "classification": "Bronchodilator / Anti-asthmatic",
     "formulation": "Hard Gelatin Capsules",
@@ -38,7 +38,7 @@ export const sample = [
   {
     "name": "Ocizyme",
     "slug": "ocizyme",
-    "image": "/OCIZYME.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/OCIZYME_guhp4q",
     "section": "Capsule",
     "classification": "Digestive Enzyme",
     "formulation": "Hard Gelatin Capsules",
@@ -67,7 +67,7 @@ export const sample = [
   {
     "name": "Adovit",
     "slug": "adovit",
-    "image": "/ADOVIT.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ADOVIT_zpndeq",
     "section": "Capsule",
     "classification": "Nutritional Supplement",
     "formulation": "Soft Gelatin Capsules",
@@ -96,7 +96,7 @@ export const sample = [
   {
     "name": "OCITOP-LS",
     "slug": "ocitop-ls",
-    "image": "/OCITOP-LS.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCITOP-LS_rckwhs",
     "section": "Capsule",
     "classification": "Gastrointestinal",
     "formulation": "Sustained Release Capsules",
@@ -125,7 +125,7 @@ export const sample = [
   {
     "name": "ADOVIT-7G",
     "slug": "adovit-7g",
-    "image": "/ADOVIT-7G.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ADOVIT-7G_u2cahq",
     "section": "Capsule",
     "classification": "Nutritional Supplement",
     "formulation": "Softgel Capsules",
@@ -154,7 +154,7 @@ export const sample = [
   {
     "name": "Ocitop-DSR",
     "slug": "ocitop-dsr",
-    "image": "/OCITOP-DSR.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCITOP-DSR_c8prat",
     "section": "Capsule",
     "classification": "Gastrointestinal",
     "formulation": "Gastro-resistant and Prolonged-release Capsules IP",
@@ -183,7 +183,7 @@ export const sample = [
   {
     "name": "Ocumin Plus",
     "slug": "ocumin-plus",
-    "image": "/OCUMIN-PLUS.jpeg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUMIN-PLUS_wo3vnj",
     "section": "Capsule",
     "classification": "Nutritional Supplement",
     "formulation": "Softgel Capsules",
@@ -212,7 +212,7 @@ export const sample = [
   {
     "name": "OCIPLAT",
     "slug": "ociplat",
-    "image": "/OCIPLAT.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIPLAT_znlnix",
     "section": "Capsule",
     "classification": "Ayurvedic Platelet Booster",
     "formulation": "Softgel Capsules",
@@ -241,7 +241,7 @@ export const sample = [
   {
     "name": "OCZ",
     "slug": "ocz",
-    "image": "/O C Z.jpeg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O_C_Z_dugdji",
     "section": "Capsule",
     "classification": "Calcium & Vitamin Supplement",
     "formulation": "Soft Gelatin Capsules",
@@ -270,7 +270,7 @@ export const sample = [
   {
     "name": "Ocukoff",
     "slug": "ocukoff",
-    "image": "/OCUKOFF.jpeg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUKOFF_h2t6xe",
     "section": "Capsule",
     "classification": "Cough & Cold",
     "formulation": "Soft Gelatin Capsules",
@@ -299,7 +299,7 @@ export const sample = [
   {
     "name": "Rose-DSR",
     "slug": "rose-dsr",
-    "image": "/ROSE-DSR.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ROSE-DSR_rlngv1",
     "section": "Capsule",
     "classification": "Gastrointestinal",
     "formulation": "Enteric Coated & Sustained Release Capsules",
@@ -328,7 +328,7 @@ export const sample = [
   {
     "name": "ORB-DSR",
     "slug": "orb-dsr",
-    "image": "/ORB-DSR.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ORB-DSR_x7rtku",
     "section": "Capsule",
     "classification": "Gastrointestinal",
     "formulation": "Enteric Coated & Sustained Release Capsules",

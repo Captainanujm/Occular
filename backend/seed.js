@@ -357,7 +357,7 @@ export const sample = [
   {
     "name": "MOFI LP",
     "slug": "mofi-lp",
-    "image": "/MOFI-LP.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/MOFI-LP_ztpnua",
     "section": "Eye Drops",
     "classification": "Antibiotic & Steroid",
     "formulation": "Ophthalmic Suspension",
@@ -386,7 +386,7 @@ export const sample = [
   {
     "name": "MOFI-P",
     "slug": "mofi-p",
-    "image": "/MOFI-P.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/MOFI-P_dhaqwj",
     "section": "Eye Drops",
     "classification": "Antibiotic & Steroid",
     "formulation": "Ophthalmic Suspension",
@@ -415,7 +415,7 @@ export const sample = [
   {
     "name": "NA-CMC GEL",
     "slug": "na-cmc-gel",
-    "image": "/NA-CMC GEL.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/NA-CMC_GEL_djl9w8",
     "section": "Eye Drops",
     "classification": "Lubricant Eye Drops",
     "formulation": "Ophthalmic Solution IP",
@@ -444,7 +444,7 @@ export const sample = [
   {
     "name": "Mofi",
     "slug": "mofi",
-    "image": "/MOFI.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/MOFI_fqhrbd",
     "section": "Eye Drops",
     "classification": "Antibiotic",
     "formulation": "Eye Drops 0.5% IP",
@@ -473,7 +473,7 @@ export const sample = [
   {
     "name": "NA-CMC ULTRA",
     "slug": "na-cmc-ultra",
-    "image": "/NA-CMC ULTRA.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/NA-CMC_ULTRA_om9ic1",
     "section": "Eye Drops",
     "classification": "Lubricant Eye Drops",
     "formulation": "Ophthalmic Solution",
@@ -502,7 +502,7 @@ export const sample = [
   {
     "name": "MOFI-D",
     "slug": "mofi-d",
-    "image": "/MOFI-D.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/MOFI-D_ye36cl",
     "section": "Eye Drops",
     "classification": "Antibiotic & Steroid",
     "formulation": "Eye Drops",
@@ -531,7 +531,7 @@ export const sample = [
   {
     "name": "OCIBROM",
     "slug": "ocibrom",
-    "image": "/OCIBROM.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIBROM_rhtyuy",
     "section": "Eye Drops",
     "classification": "NSAID",
     "formulation": "Ophthalmic Solution",
@@ -560,7 +560,7 @@ export const sample = [
   {
     "name": "Noor Tears",
     "slug": "noor-tears",
-    "image": "/NOOR-TEARS.jpeg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/NOOR-TEARS_wydldl",
     "section": "Eye Drops",
     "classification": "Lubricant Eye Drops",
     "formulation": "Ophthalmic Solution",
@@ -589,7 +589,7 @@ export const sample = [
   {
     "name": "NA-CMC",
     "slug": "na-cmc",
-    "image": "/NA-CMC.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/NA-CMC_kkxsb6",
     "section": "Eye Drops",
     "classification": "Lubricant Eye Drops",
     "formulation": "Ophthalmic Solution IP",
@@ -618,7 +618,7 @@ export const sample = [
   {
     "name": "MOFI-K",
     "slug": "mofi-k",
-    "image": "/MOFI-K.jpeg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/MOFI-K_kdejxp",
     "section": "Eye Drops",
     "classification": "Antibiotic & NSAID",
     "formulation": "Eye Drops",
@@ -647,7 +647,7 @@ export const sample = [
   {
     "name": "VINFLUR",
     "slug": "vinflur",
-    "image": "/VINFLUR.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/VINFLUR_irmg44",
     "section": "Eye Drops",
     "classification": "NSAID",
     "formulation": "Ophthalmic Solution IP",
@@ -676,7 +676,7 @@ export const sample = [
   {
     "name": "O-MOF P",
     "slug": "o-mof-p",
-    "image": "/O-MOF-P.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-MOF-P_yc7ky0",
     "section": "Eye Drops",
     "classification": "Antibiotic & Steroid",
     "formulation": "Ophthalmic Suspension",
@@ -763,7 +763,7 @@ export const sample = [
   {
     "name": "TRO-PLUS",
     "slug": "tro-plus",
-    "image": "/TRO-PLUS.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/TRO-PLUS_nrzggr",
     "section": "Eye Drops",
     "classification": "Mydriatic",
     "formulation": "Eye Drops",
@@ -792,7 +792,7 @@ export const sample = [
   {
     "name": "Ocinac",
     "slug": "ocinac-eye-drops",
-    "image": "/OCINAC.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCINAC_z2folt",
     "section": "Eye Drops",
     "classification": "NSAID",
     "formulation": "Ophthalmic Solution",
@@ -821,7 +821,7 @@ export const sample = [
   {
     "name": "OCILAR",
     "slug": "ocilar",
-    "image": "/OCILAR.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCILAR_gt95up",
     "section": "Eye Drops",
     "classification": "Antibiotic",
     "formulation": "Ophthalmic Solution IP",
@@ -850,7 +850,7 @@ export const sample = [
   {
     "name": "O-MOF",
     "slug": "o-mof",
-    "image": "/O-MOF.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-MOF_efnjfx",
     "section": "Eye Drops",
     "classification": "Antibiotic",
     "formulation": "Ophthalmic Solution IP",
@@ -879,7 +879,7 @@ export const sample = [
   {
     "name": "OCILAR-D",
     "slug": "ocilar-d",
-    "image": "/OCILAR-D.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCILAR-D_vawjm8",
     "section": "Eye Drops",
     "classification": "Antibiotic & Steroid",
     "formulation": "Ophthalmic Solution (Eye/Ear Drops)",
@@ -908,7 +908,7 @@ export const sample = [
   {
     "name": "Ocugate-FL",
     "slug": "ocugate-fl",
-    "image": "/OCUGATE-FL.jpeg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUGATE-FL_j1wn3q",
     "section": "Eye Drops",
     "classification": "Antibiotic & NSAID",
     "formulation": "Ophthalmic Solution",
@@ -937,7 +937,7 @@ export const sample = [
   {
     "name": "VINSOL",
     "slug": "vinsol",
-    "image": "/VINSOL.jpeg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/VINSOL_ox2ar1",
     "section": "Eye Drops",
     "classification": "Ocular Lubricant/Protectant",
     "formulation": "Eye Drops",
@@ -966,7 +966,7 @@ export const sample = [
   {
     "name": "VINGATE",
     "slug": "vingate",
-    "image": "/VINGATE.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/VINGATE_yodgti",
     "section": "Eye Drops",
     "classification": "Antibiotic",
     "formulation": "Ophthalmic Solution",
@@ -991,10 +991,12 @@ export const sample = [
         "content": "NMS Healthcare"
       }
     ]
-  },{
+  }
+  //injection
+  ,{
     "name": "Ocicef-1000",
     "slug": "ocicef-1000",
-    "image": "/OCICEF-1 GM.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCICEF-1_GM_pvtywu",
     "section": "Injection",
     "classification": "Antibiotic",
     "formulation": "Injection IP (Vial + Sterile Water)",
@@ -1023,7 +1025,7 @@ export const sample = [
   {
     "name": "OCIZOLE",
     "slug": "ocizole-40",
-    "image": "/OCIZOLE-40.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIZOLE-40_qtvezy",
     "section": "Injection",
     "classification": "Gastrointestinal (Proton Pump Inhibitor)",
     "formulation": "Lyophilized Powder for Injection",
@@ -1052,7 +1054,7 @@ export const sample = [
   {
     "name": "Ocicef-375",
     "slug": "ocicef-375",
-    "image": "/OCICEF-375.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCICEF-375_i7a01a",
     "section": "Injection",
     "classification": "Antibiotic",
     "formulation": "Injection (Vial + Sterile Water)",
@@ -1081,7 +1083,7 @@ export const sample = [
   {
     "name": "Ocitop-IV",
     "slug": "ocitop-iv",
-    "image": "/OCITOP-IV.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCITOP-IV_uymcd6",
     "section": "Injection",
     "classification": "Gastrointestinal (Proton Pump Inhibitor)",
     "formulation": "Lyophilized Powder for Injection",
@@ -1110,7 +1112,7 @@ export const sample = [
   {
     "name": "Ocither",
     "slug": "ocither-injection",
-    "image": "/OCITHER.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCITHER_ykpyrx",
     "section": "Injection",
     "classification": "Antimalarial",
     "formulation": "Injection (Ampoules)",
@@ -1139,7 +1141,7 @@ export const sample = [
   {
     "name": "OCUDEC-25",
     "slug": "ocudec-25",
-    "image": "/OCUDEC-25.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUDEC-25_fijrpc",
     "section": "Injection",
     "classification": "Anabolic Steroid",
     "formulation": "Injection IP (Dispo Pack)",
@@ -1168,7 +1170,7 @@ export const sample = [
   {
     "name": "Ocicef-1.5",
     "slug": "ocicef-1.5",
-    "image": "/OCICEF-1.5.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCICEF-1.5_dy9x3w",
     "section": "Injection",
     "classification": "Antibiotic",
     "formulation": "Injection (Vial + Sterile Water)",
@@ -1197,7 +1199,7 @@ export const sample = [
   {
     "name": "Ocicef-500",
     "slug": "ocicef-500",
-    "image": "/OCICEF-500.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCICEF-500_dtp7v7",
     "section": "Injection",
     "classification": "Antibiotic",
     "formulation": "Injection IP (Vial + Sterile Water)",
@@ -1226,7 +1228,7 @@ export const sample = [
   {
     "name": "OCUDEC-50",
     "slug": "ocudec-50",
-    "image": "/OCUDEC-50.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUDEC-50_lplnpd",
     "section": "Injection",
     "classification": "Anabolic Steroid",
     "formulation": "Injection IP (Dispo Pack)",
@@ -1255,7 +1257,7 @@ export const sample = [
   {
     "name": "Ocicort-40",
     "slug": "ocicort-40",
-    "image": "/OCICORT-40.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCICORT-40_uylnrx",
     "section": "Injection",
     "classification": "Corticosteroid",
     "formulation": "Injection IP (Vial)",
@@ -1284,7 +1286,7 @@ export const sample = [
   {
     "name": "O-PIZ - 4.5",
     "slug": "o-piz-4.5",
-    "image": "/O-PIZ 4.5.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-PIZ_4.5_lf2rdu",
     "section": "Injection",
     "classification": "Antibiotic",
     "formulation": "Injection IP (Vial + Sterile Water)",
@@ -1313,7 +1315,7 @@ export const sample = [
   {
     "name": "O-Dic Aqua",
     "slug": "o-dic-aqua",
-    "image": "/O-DIC AQUA.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-DIC_AQUA_sg4rfj",
     "section": "Injection",
     "classification": "Pain Relief (NSAID)",
     "formulation": "Injection IP (Ampoules)",
@@ -1342,7 +1344,7 @@ export const sample = [
   {
     "name": "O VOM",
     "slug": "o-vom-injection",
-    "image": "/O-VOM INJ.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-VOM_INJ_pd7ua5",
     "section": "Injection",
     "classification": "Antiemetic",
     "formulation": "Injection IP (Ampoules)",
@@ -1371,7 +1373,7 @@ export const sample = [
   {
     "name": "Ocumin-Forte",
     "slug": "ocumin-forte",
-    "image": "/OCUMIN-FORTE.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUMIN-FORTE_rz5eo9",
     "section": "Injection",
     "classification": "Vitamin Supplement",
     "formulation": "Injection (Ampoule + Dispo Pack)",
@@ -1400,7 +1402,7 @@ export const sample = [
   {
     "name": "OCUMIN-GOLD",
     "slug": "ocumin-gold",
-    "image": "/OCUMIN-GOLD.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUMIN_cvsz0y",
     "section": "Injection",
     "classification": "Vitamin Supplement",
     "formulation": "Injection (Ampoules)",
@@ -1428,7 +1430,7 @@ export const sample = [
   },{
     "name": "Ocumik-500",
     "slug": "ocumik-500",
-    "image": "/OCUMIK-500.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUMIK-500_kzmwfk",
     "section": "Injection",
     "classification": "Antibiotic",
     "formulation": "Injection IP",
@@ -1457,7 +1459,7 @@ export const sample = [
   {
     "name": "Ocumin",
     "slug": "ocumin-injection",
-    "image": "/OCUMIN.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUMIN_cvsz0y",
     "section": "Injection",
     "classification": "Vitamin Supplement",
     "formulation": "Injection",
@@ -1483,10 +1485,11 @@ export const sample = [
       }
     ]
   },
+  //special products
   {
     "name": "O-Dic Gel",
     "slug": "o-dic-gel",
-    "image": "/O-DIC GEL.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-DIC_GEL_uag5j3",
     "section": "Special Products",
     "classification": "Topical Pain Relief",
     "formulation": "Gel",
@@ -1515,7 +1518,7 @@ export const sample = [
   {
     "name": "Ocu-Derm",
     "slug": "ocu-derm",
-    "image": "/OCU-DERM.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCU-DERM_ssb3os",
     "section": "Special Products",
     "classification": "Topical Cream",
     "formulation": "Cream",
@@ -1544,7 +1547,7 @@ export const sample = [
   {
     "name": "ADOVIT GOLD Protein Powder",
     "slug": "adovit-gold-protein-powder",
-    "image": "/ADOVIT GOLD POWDER.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ADOVIT_GOLD_POWDER_w3xgje",
     "section": "Special Products",
     "classification": "Nutritional Supplement",
     "formulation": "Protein Powder",
@@ -1573,7 +1576,7 @@ export const sample = [
   {
     "name": "Adovit-Gold",
     "slug": "adovit-gold-sachet",
-    "image": "/ADOVIT GOLD.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ADOVIT_GOLD_otzgks",
     "section": "Special Products",
     "classification": "Nutraceutical",
     "formulation": "Powder (Sachets)",
@@ -1602,7 +1605,7 @@ export const sample = [
   {
     "name": "OCILAC aqua",
     "slug": "ocilac-aqua",
-    "image": "/OCILAC.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCILAC_ognlmu",
     "section": "Special Products",
     "classification": "Probiotic",
     "formulation": "Suspension (Mini Bottles)",
@@ -1631,7 +1634,7 @@ export const sample = [
   {
     "name": "Nutro Gumz",
     "slug": "nutro-gumz",
-    "image": "/NUTO-GUMZ.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/NUTO-GUMZ_n1nxqb",
     "section": "Special Products",
     "classification": "Nutraceutical",
     "formulation": "Gummy",
@@ -1657,10 +1660,11 @@ export const sample = [
       }
     ]
   },
+  //syrups Products
   {
     "name": "ACELAR-P",
     "slug": "acelar-p",
-    "image": "/ACELAR-P.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ACELAR-P_beb4uw",
     "section": "Syrup",
     "classification": "Pain Relief",
     "formulation": "Suspension",
@@ -1689,7 +1693,7 @@ export const sample = [
   {
     "name": "CFD",
     "slug": "cfd-dry-syrup",
-    "image": "/CFD.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/CFD_xeefuf",
     "section": "Syrup",
     "classification": "Antibiotic",
     "formulation": "Dry Syrup (Oral Suspension)",
@@ -1718,7 +1722,7 @@ export const sample = [
   {
     "name": "COLITIME",
     "slug": "colitime",
-    "image": "/COLITIME.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/COLITIME_dh5gqn",
     "section": "Syrup",
     "classification": "Antibiotic",
     "formulation": "For Oral Suspension I.P. (Dry Powder)",
@@ -1743,7 +1747,7 @@ export const sample = [
   {
     "name": "Dasdryl",
     "slug": "dasdryl",
-    "image": "/DASDRYL.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/DASDRYL_ajvkcm",
     "section": "Syrup",
     "classification": "Cough Syrup",
     "formulation": "Cough Formula Syrup",
@@ -1772,7 +1776,7 @@ export const sample = [
   {
     "name": "Gutpedia-Z",
     "slug": "gutpedia-z",
-    "image": "/GUTPEDIA-Z.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/GUTPEDIA-Z_pwgywv",
     "section": "Syrup",
     "classification": "Probiotic & Multivitamin",
     "formulation": "Dry Syrup (Oral Suspension)",
@@ -1801,7 +1805,7 @@ export const sample = [
   {
     "name": "GYNO-FM",
     "slug": "gyno-fm",
-    "image": "/GYNO-FM.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/GYNO-FM_brhhlq",
     "section": "Syrup",
     "classification": "Ayurvedic Uterine Tonic",
     "formulation": "Syrup (Ayurvedic)",
@@ -1830,7 +1834,7 @@ export const sample = [
   {
     "name": "H ZIN-M",
     "slug": "h-zin-m-syrup",
-    "image": "/H-ZIN M.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/H-ZIN_M_uuzmkw",
     "section": "Syrup",
     "classification": "Anti-allergic",
     "formulation": "Syrup",
@@ -1859,7 +1863,7 @@ export const sample = [
   {
     "name": "Happy D3 Drops",
     "slug": "happy-d3",
-    "image": "/HAPPY-D3.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/HAPPY-D3_hrold8",
     "section": "Syrup",
     "classification": "Vitamin Supplement",
     "formulation": "Oral Drop",
@@ -1888,7 +1892,7 @@ export const sample = [
   {
     "name": "Larcyp",
     "slug": "larcyp",
-    "image": "/LARCYP.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/LARCYP_ghuom7",
     "section": "Syrup",
     "classification": "Appetite Stimulant",
     "formulation": "Syrup",
@@ -1917,7 +1921,7 @@ export const sample = [
   {
     "name": "RD-Health",
     "slug": "rd-health",
-    "image": "/FELARVIT.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/FELARVIT_plrekk",
     "section": "Syrup",
     "classification": "Multivitamin & Multimineral",
     "formulation": "Syrup",
@@ -1944,9 +1948,9 @@ export const sample = [
     ]
   },
   {
-    "name": "OCLAR-SM",
-    "slug": "oclar-sm",
-    "image": "/OCILAR-SM.jpg",
+    "name": "OCILAR-SM",
+    "slug": "ocilar-sm",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCILAR-SM_dgubuu",
     "section": "Syrup",
     "classification": "Antibiotic & Antidiarrheal",
     "formulation": "Suspension",
@@ -1975,7 +1979,7 @@ export const sample = [
   {
     "name": "Ocikof-LS Junior",
     "slug": "ocikof-ls-junior",
-    "image": "/OCIKOF-LS JUNIOR.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIKOF-LS_JUNIOR_tfdfcy",
     "section": "Syrup",
     "classification": "Expectorant",
     "formulation": "Syrup",
@@ -2004,7 +2008,7 @@ export const sample = [
   {
     "name": "Ociplat",
     "slug": "ociplat-100ml",
-    "image": "/OCIPLAT 100 ML.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIPLAT_100_ML_dgpqp2",
     "section": "Syrup",
     "classification": "Ayurvedic Platelet Booster",
     "formulation": "Syrup (Ayurvedic)",
@@ -2033,7 +2037,7 @@ export const sample = [
   {
     "name": "Ocimef-P",
     "slug": "ocimef-p",
-    "image": "/OCIMEF-P.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIMEF-P_md9myl",
     "section": "Syrup",
     "classification": "Pain Relief",
     "formulation": "Suspension",
@@ -2062,7 +2066,7 @@ export const sample = [
   {
     "name": "Ocimef-DS",
     "slug": "ocimef-ds",
-    "image": "/OCIMEF-DS.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIMEF-DS_x9xcon",
     "section": "Syrup",
     "classification": "Pain Relief",
     "formulation": "Suspension",
@@ -2091,7 +2095,7 @@ export const sample = [
   {
     "name": "Ocikold",
     "slug": "ocikold",
-    "image": "/OCIKOLD.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIKOLD_p9twh7",
     "section": "Syrup",
     "classification": "Cold & Allergy",
     "formulation": "Suspension",
@@ -2120,7 +2124,7 @@ export const sample = [
   {
     "name": "Ocipara-98",
     "slug": "ocipara-98",
-    "image": "/OCIPARA-98.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIPARA-98_kod3m8",
     "section": "Syrup",
     "classification": "Fever & Pain Relief",
     "formulation": "Paediatric Oral Suspension IP",
@@ -2149,7 +2153,7 @@ export const sample = [
   {
     "name": "Ocinac-P",
     "slug": "ocinac-p-suspension",
-    "image": "/OCINAC-P.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCINAC-P_b53cez",
     "section": "Syrup",
     "classification": "Pain Relief",
     "formulation": "Suspension",
@@ -2178,7 +2182,7 @@ export const sample = [
   {
     "name": "OCIFER",
     "slug": "ocifer",
-    "image": "/OCIFER.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIFER_zqkwnt",
     "section": "Syrup",
     "classification": "Iron Supplement",
     "formulation": "Suspension",
@@ -2207,7 +2211,7 @@ export const sample = [
   {
     "name": "Ociclav-DS",
     "slug": "ociclav-ds",
-    "image": "/OCICLAV-DS.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCICLAV-DS_qw6cui",
     "section": "Syrup",
     "classification": "Antibiotic",
     "formulation": "Dry Syrup (Oral Suspension)",
@@ -2236,7 +2240,7 @@ export const sample = [
   {
     "name": "LARPLEX",
     "slug": "larplex",
-    "image": "/LARPLEX.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/LARPLEX_zjfegm",
     "section": "Syrup",
     "classification": "Multivitamin & Multimineral",
     "formulation": "Syrup",
@@ -2265,7 +2269,7 @@ export const sample = [
   {
     "name": "OC-CYP",
     "slug": "oc-cyp",
-    "image": "/OC-CYP.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OC-CYP_lu4ubk",
     "section": "Syrup",
     "classification": "Appetite Stimulant",
     "formulation": "Syrup",
@@ -2294,7 +2298,7 @@ export const sample = [
   {
     "name": "Ociplat",
     "slug": "ociplat-syrup",
-    "image": "/OCIPLAT.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIPLAT_ogbhqu",
     "section": "Syrup",
     "classification": "Ayurvedic Platelet Booster",
     "formulation": "Syrup (Ayurvedic)",
@@ -2323,7 +2327,7 @@ export const sample = [
   {
     "name": "OCIZYME",
     "slug": "ocizyme-tonic",
-    "image": "/OCIZYME.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIZYME_cab6za",
     "section": "Syrup",
     "classification": "Digestive Tonic",
     "formulation": "Digestive Tonic (Ayurvedic Syrup)",
@@ -2352,7 +2356,7 @@ export const sample = [
   {
     "name": "O-CORT",
     "slug": "o-cort-suspension",
-    "image": "/O-CORT.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-CORT_jvfyfv",
     "section": "Syrup",
     "classification": "Corticosteroid",
     "formulation": "Suspension",
@@ -2381,7 +2385,7 @@ export const sample = [
   {
     "name": "Ocucof-LS",
     "slug": "ocucof-ls",
-    "image": "/OCUCOF-LS.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCOF-LS_JUNIOR_pgecsl",
     "section": "Syrup",
     "classification": "Expectorant",
     "formulation": "Syrup",
@@ -2410,7 +2414,7 @@ export const sample = [
   {
     "name": "Ocupod-50",
     "slug": "ocupod-50",
-    "image": "/OCUPOD-50.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUPOD-50_mdsizq",
     "section": "Syrup",
     "classification": "Antibiotic",
     "formulation": "Dry Syrup (Oral Suspension IP)",
@@ -2439,7 +2443,7 @@ export const sample = [
   {
     "name": "Ocucof-D",
     "slug": "ocucof-d",
-    "image": "/OCUCOF-D.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCOF-D_sbgbfp",
     "section": "Syrup",
     "classification": "Cough Syrup",
     "formulation": "Syrup",
@@ -2468,7 +2472,7 @@ export const sample = [
   {
     "name": "Oculid",
     "slug": "oculid",
-    "image": "/OCULID.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCULID_u3z2q9",
     "section": "Syrup",
     "classification": "Antibiotic",
     "formulation": "Dry Syrup (Oral Suspension)",
@@ -2497,7 +2501,7 @@ export const sample = [
   {
     "name": "Ocucof-AM",
     "slug": "ocucof-am",
-    "image": "/OCUCOF-AM.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCOF-AM_oxlmhc",
     "section": "Syrup",
     "classification": "Cough Syrup (Expectorant)",
     "formulation": "Syrup",
@@ -2526,7 +2530,7 @@ export const sample = [
   {
     "name": "Ocucid-Z",
     "slug": "ocucid-z",
-    "image": "/OCUCID-Z.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCID-Z_bpcmw2",
     "section": "Syrup",
     "classification": "Antacid & Antigas",
     "formulation": "Oral Suspension IP",
@@ -2555,7 +2559,7 @@ export const sample = [
   {
     "name": "Ocucet-LM",
     "slug": "ocucet-lm-syrup",
-    "image": "/OCUCET-LM.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCET-LM_opbolt",
     "section": "Syrup",
     "classification": "Anti-allergic",
     "formulation": "Syrup",
@@ -2584,7 +2588,7 @@ export const sample = [
   {
     "name": "Ocucef",
     "slug": "ocucef-dry-syrup",
-    "image": "/OCUCEF.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCEF_wdguma",
     "section": "Syrup",
     "classification": "Antibiotic with Probiotic",
     "formulation": "Dry syrup (Oral Suspension)",
@@ -2613,7 +2617,7 @@ export const sample = [
   {
     "name": "OCUCOF-LS Junior",
     "slug": "ocucof-ls-junior",
-    "image": "/OCUCOF-LS JUNIOR.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCOF-LS_JUNIOR_pgecsl",
     "section": "Syrup",
     "classification": "Expectorant",
     "formulation": "Syrup",
@@ -2642,7 +2646,7 @@ export const sample = [
   {
     "name": "Ocupod-100",
     "slug": "ocupod-100",
-    "image": "/OCUPOD-100.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUPOD-100_fsykvu",
     "section": "Syrup",
     "classification": "Antibiotic",
     "formulation": "Dry Syrup (Oral Suspension I.P.)",
@@ -2671,7 +2675,7 @@ export const sample = [
   {
     "name": "OCUPOD-CV",
     "slug": "ocupod-cv",
-    "image": "/OCUPOD-CV.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUPOD-CV_hdio8n",
     "section": "Syrup",
     "classification": "Antibiotic",
     "formulation": "Dry Syrup (Oral Suspension)",
@@ -2700,7 +2704,7 @@ export const sample = [
   {
     "name": "OCUSIP-L",
     "slug": "ocusip-l",
-    "image": "/OCUSIP-L.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUSIP-L_dzzn6j",
     "section": "Syrup",
     "classification": "Vitamin Supplement",
     "formulation": "Syrup",
@@ -2729,7 +2733,7 @@ export const sample = [
   {
     "name": "O-VOM",
     "slug": "o-vom",
-    "image": "/O-VOM.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-VOM_lk9twt",
     "section": "Syrup",
     "classification": "Antiemetic",
     "formulation": "Syrup",
@@ -2758,7 +2762,7 @@ export const sample = [
   {
     "name": "Ocuzinc",
     "slug": "ocuzinc",
-    "image": "/OCUZINC.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUZINC_nl4akq",
     "section": "Syrup",
     "classification": "Probiotic & Multivitamin",
     "formulation": "Dry Syrup (Oral Suspension)",
@@ -2787,7 +2791,7 @@ export const sample = [
   {
     "name": "OZT-200",
     "slug": "ozt-200",
-    "image": "/OZT-200.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OZT-200_q2bb4p",
     "section": "Syrup",
     "classification": "Antibiotic",
     "formulation": "Oral Suspension IP",
@@ -2816,7 +2820,7 @@ export const sample = [
   {
     "name": "RD-LIV",
     "slug": "rd-liv",
-    "image": "/RD-LIV.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/RD-LIV_s7m0m6",
     "section": "Syrup",
     "classification": "Liver Support",
     "formulation": "Syrup",
@@ -2842,10 +2846,11 @@ export const sample = [
       }
     ]
   },
+  //tablets
   {
     "name": "CFD-200",
     "slug": "cfd-200",
-    "image": "/CFD-200.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/CFD-200_hdbdrl",
     "section": "Tablet",
     "classification": "Antibiotic",
     "formulation": "Tablets",
@@ -2874,7 +2879,7 @@ export const sample = [
   {
     "name": "OCITHER-LF",
     "slug": "ocither-lf",
-    "image": "/OCITHER.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCITHER_eiuwyx",
     "section": "Tablet",
     "classification": "Antimalarial",
     "formulation": "Tablets",
@@ -2903,7 +2908,7 @@ export const sample = [
   {
     "name": "ACELAR PLUS",
     "slug": "acelar-plus",
-    "image": "/ACELAR-PLUS.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ACELAR-PLUS_ofwl7l",
     "section": "Tablet",
     "classification": "Pain Relief",
     "formulation": "Tablets",
@@ -2932,7 +2937,7 @@ export const sample = [
   {
     "name": "Ocinac-SP",
     "slug": "ocinac-sp",
-    "image": "/OCINAC-SP.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCINAC-SP_omoqxu",
     "section": "Tablet",
     "classification": "Pain Relief & Anti-inflammatory",
     "formulation": "Tablets",
@@ -2961,7 +2966,7 @@ export const sample = [
   {
     "name": "Ocilar-OZ",
     "slug": "ocilar-oz",
-    "image": "/OCILAR-OZ.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCLIAR-OZ_ltmuct",
     "section": "Tablet",
     "classification": "Antibiotic & Antiamoebic",
     "formulation": "Tablets IP",
@@ -2990,7 +2995,7 @@ export const sample = [
   {
     "name": "H-ZIN-M",
     "slug": "h-zin-m",
-    "image": "/H-ZIN M.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/H-ZIN_M_msjhi0",
     "section": "Tablet",
     "classification": "Anti-allergic",
     "formulation": "Tablets",
@@ -3019,7 +3024,7 @@ export const sample = [
   {
     "name": "Ocinac-Plus",
     "slug": "ocinac-plus",
-    "image": "/OCINACPLUS.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCINACPLUS_efqkde",
     "section": "Tablet",
     "classification": "Pain Relief",
     "formulation": "Tablets",
@@ -3048,7 +3053,7 @@ export const sample = [
   {
     "name": "Ocitop-40",
     "slug": "ocitop-40",
-    "image": "/OCITOP-40.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCITOP-40_is6akc",
     "section": "Tablet",
     "classification": "Gastrointestinal",
     "formulation": "Gastro-resistant Tablets IP",
@@ -3077,7 +3082,7 @@ export const sample = [
   {
     "name": "ACELAR - SP",
     "slug": "acelar-sp",
-    "image": "/ACELAR-SP.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ACELAR-SP_fcdmek",
     "section": "Tablet",
     "classification": "Pain Relief & Anti-inflammatory",
     "formulation": "Tablets",
@@ -3106,7 +3111,7 @@ export const sample = [
   {
     "name": "ACELAR-MR",
     "slug": "acelar-mr",
-    "image": "/ACELAR-MR.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ACELAR-MR_akdwjo",
     "section": "Tablet",
     "classification": "Pain Relief & Muscle Relaxant",
     "formulation": "Tablets",
@@ -3135,7 +3140,7 @@ export const sample = [
   {
     "name": "OCUCEF - 200 LB",
     "slug": "ocucef-200-lb",
-    "image": "/OCUCEF-200.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCEF-200_b0h57g",
     "section": "Tablet",
     "classification": "Antibiotic with Probiotic",
     "formulation": "Film Coated Tablets",
@@ -3164,7 +3169,7 @@ export const sample = [
   {
     "name": "OC-CEF-200 LB",
     "slug": "oc-cef-200-lb",
-    "image": "/OC-CEF-200 LB.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OC-CEF-200_LB_enijja",
     "section": "Tablet",
     "classification": "Antibiotic with Probiotic",
     "formulation": "Dispersible Tablets",
@@ -3193,7 +3198,7 @@ export const sample = [
   {
     "name": "OCUCEF-100",
     "slug": "ocucef-100",
-    "image": "/OCUCEF-100.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCEF-100_ufdpgj",
     "section": "Tablet",
     "classification": "Antibiotic",
     "formulation": "Dispersible Tablets IP",
@@ -3222,7 +3227,7 @@ export const sample = [
   {
     "name": "Ocucef-O",
     "slug": "ocucef-o",
-    "image": "/OCUCEF-O.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCEF-O_u5bujy",
     "section": "Tablet",
     "classification": "Antibiotic",
     "formulation": "Tablets",
@@ -3251,7 +3256,7 @@ export const sample = [
   {
     "name": "O-CORT 6",
     "slug": "o-cort-6",
-    "image": "/O-CORT 6.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-CORT_6_w5lnga",
     "section": "Tablet",
     "classification": "Corticosteroid",
     "formulation": "Tablets",
@@ -3280,7 +3285,7 @@ export const sample = [
   {
     "name": "Ociclav-625 LB",
     "slug": "ociclav-625-lb",
-    "image": "/OCICLAV-625.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCICLAV-625_h5emty",
     "section": "Tablet",
     "classification": "Antibiotic with Probiotic",
     "formulation": "Tablets",
@@ -3309,7 +3314,7 @@ export const sample = [
   {
     "name": "O DIC-SP",
     "slug": "o-dic-sp",
-    "image": "/O DIC-SP.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O_DIC-SP_tp0doo",
     "section": "Tablet",
     "classification": "Pain Relief & Anti-inflammatory",
     "formulation": "Tablets",
@@ -3338,7 +3343,7 @@ export const sample = [
   {
     "name": "O-DOT-M",
     "slug": "o-dot-m",
-    "image": "/O DOT-M.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O_DOT-M_cofvbc",
     "section": "Tablet",
     "classification": "Antispasmodic & Pain Relief",
     "formulation": "Tablets",
@@ -3367,7 +3372,7 @@ export const sample = [
   {
     "name": "Ocilar-OZ",
     "slug": "ocilar-oz-tablet",
-    "image": "/OCLIAR-OZ.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCILAR-OZ_lf69ps",
     "section": "Tablet",
     "classification": "Antibiotic & Antiamoebic",
     "formulation": "Tablets IP",
@@ -3396,7 +3401,7 @@ export const sample = [
   {
     "name": "Ocicox-90",
     "slug": "ocicox-90",
-    "image": "/OCICOX-90.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCICOX-90_hylcaq",
     "section": "Tablet",
     "classification": "Pain Relief (NSAID)",
     "formulation": "Tablets IP",
@@ -3425,7 +3430,7 @@ export const sample = [
   {
     "name": "OCUCET-5",
     "slug": "ocucet-5",
-    "image": "/OCUCET-5.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUCET-5_g9b4pp",
     "section": "Tablet",
     "classification": "Anti-allergic",
     "formulation": "Tablets IP",
@@ -3454,7 +3459,7 @@ export const sample = [
   {
     "name": "OZT-250",
     "slug": "ozt-250",
-    "image": "/OZT-250.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OZT-250_gdvlwi",
     "section": "Tablet",
     "classification": "Antibiotic",
     "formulation": "Tablets IP",
@@ -3483,7 +3488,7 @@ export const sample = [
   {
     "name": "RD-Count",
     "slug": "rd-count",
-    "image": "/RD-COUNT.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/RD-COUNT_bcrfrh",
     "section": "Tablet",
     "classification": "Ayurvedic Platelet Booster",
     "formulation": "Tablet",
@@ -3512,7 +3517,7 @@ export const sample = [
   {
     "name": "Ocilar-200",
     "slug": "ocilar-200",
-    "image": "/OCILAR-200.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCILAR-200_kootcn",
     "section": "Tablet",
     "classification": "Antibiotic",
     "formulation": "Tablets IP",
@@ -3541,7 +3546,7 @@ export const sample = [
   {
     "name": "Ocigrain-10",
     "slug": "ocigrain-10",
-    "image": "/OCIGRAIN-10.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCIGRAIN-10_ehqyst",
     "section": "Tablet",
     "classification": "Migraine Prophylaxis",
     "formulation": "Tablets IP",
@@ -3570,7 +3575,7 @@ export const sample = [
   {
     "name": "Oculiv-300",
     "slug": "oculiv-300",
-    "image": "/OCULIV-300.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCULIV-300_mcie4e",
     "section": "Tablet",
     "classification": "Hepatoprotective",
     "formulation": "Film coated Tablet IP",
@@ -3599,7 +3604,7 @@ export const sample = [
   {
     "name": "Ocupod-200",
     "slug": "ocupod-200",
-    "image": "/OCUPOD-200.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUPOD-200_yb4dc0",
     "section": "Tablet",
     "classification": "Antibiotic",
     "formulation": "Tablets I.P.",
@@ -3628,7 +3633,7 @@ export const sample = [
   {
     "name": "O-VOM MD",
     "slug": "o-vom-md",
-    "image": "/O-VOM MD.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/O-VOM_MD_jpzij8",
     "section": "Tablet",
     "classification": "Antiemetic",
     "formulation": "Orally Disintegrating Tablets IP",
@@ -3657,7 +3662,7 @@ export const sample = [
   {
     "name": "Ocured-4",
     "slug": "ocured-4",
-    "image": "/OCURED-4.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCURED-4_rpyck6",
     "section": "Tablet",
     "classification": "Corticosteroid",
     "formulation": "Tablets IP",
@@ -3686,7 +3691,7 @@ export const sample = [
   {
     "name": "Ocured-8",
     "slug": "ocured-8",
-    "image": "/OCURED-8.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCURED-8_i8cwbb",
     "section": "Tablet",
     "classification": "Corticosteroid",
     "formulation": "Tablets IP",
@@ -3715,7 +3720,7 @@ export const sample = [
   {
     "name": "Ocu-NP",
     "slug": "ocu-np",
-    "image": "/OCU-NP.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCU-NP_zjd56k",
     "section": "Tablet",
     "classification": "Pain Relief (NSAID)",
     "formulation": "Tablets",
@@ -3744,7 +3749,7 @@ export const sample = [
   {
     "name": "ON-CLAV 625 LB",
     "slug": "on-clav-625-lb",
-    "image": "/ON-CLAV 625.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ON-CLAV_625_qedz4h",
     "section": "Tablet",
     "classification": "Antibiotic with Probiotic",
     "formulation": "Tablets",
@@ -3773,7 +3778,7 @@ export const sample = [
   {
     "name": "ON-MD",
     "slug": "on-md",
-    "image": "/ON-MD.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/ON-MD_vwzas3",
     "section": "Tablet",
     "classification": "Pain Relief (NSAID)",
     "formulation": "Mouth Dissolving Tablets",
@@ -3802,7 +3807,7 @@ export const sample = [
   {
     "name": "OCUZOLE-150",
     "slug": "ocuzole-150",
-    "image": "/OCUZOLE-150.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUZOLE-150_juxub8",
     "section": "Tablet",
     "classification": "Antifungal",
     "formulation": "Tablets IP",
@@ -3831,7 +3836,7 @@ export const sample = [
   {
     "name": "Ocupod-CV",
     "slug": "ocupod-cv-tablet",
-    "image": "/OCUPOD-CV.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/OCUPOD-CV_pdjvon",
     "section": "Tablet",
     "classification": "Antibiotic",
     "formulation": "Tablets",
@@ -3860,7 +3865,7 @@ export const sample = [
   {
     "name": "RD-DOX-LB",
     "slug": "rd-dox-lb",
-    "image": "/RD-DOX LB.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/RD-DOX_LB_gzzhsi",
     "section": "Tablet",
     "classification": "Antibiotic with Probiotic",
     "formulation": "Tablets",
@@ -3889,7 +3894,7 @@ export const sample = [
   {
     "name": "RD NP",
     "slug": "rd-np",
-    "image": "/RD-NP.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/RD-NP_gp9jpl",
     "section": "Tablet",
     "classification": "Pain Relief (NSAID)",
     "formulation": "Tablets",
@@ -3918,7 +3923,7 @@ export const sample = [
   {
     "name": "RD ZOLE-20",
     "slug": "rd-zole-20",
-    "image": "/RD-ZOLE.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/RD-ZOLE_goohd3",
     "section": "Capsule",
     "classification": "Gastrointestinal",
     "formulation": "Gastro-Resistant Capsules IP",
@@ -3947,7 +3952,7 @@ export const sample = [
   {
     "name": "S-DICLO",
     "slug": "s-diclo",
-    "image": "/S-DICLO.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/S-DICLO_jmht45",
     "section": "Tablet",
     "classification": "Pain Relief & Anti-inflammatory",
     "formulation": "Enteric Coated Tablets",
@@ -3976,7 +3981,7 @@ export const sample = [
   {
     "name": "RD-SPAS",
     "slug": "rd-spas",
-    "image": "/RD-SPAS.jpg",
+    "image": "https://res.cloudinary.com/dbx0st32x/image/upload/f_auto,q_auto/RD-SPAS_pow1fe",
     "section": "Tablet",
     "classification": "Antispasmodic & Pain Relief",
     "formulation": "Tablets IP",

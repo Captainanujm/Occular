@@ -26,34 +26,50 @@ export default function ProductCategoryPage() {
   }, [classification]);
 
   return (
-    <div className="min-h-screen bg-[#0f1d1f] py-14 px-6">
+    <div className="min-h-screen bg-gradient-to-b from-[#031F26] via-[#062E35] to-[#021B21] py-20 px-6 text-white">
       <div className="max-w-6xl mx-auto">
 
-        {/* Title */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-semibold text-teal-300 tracking-wide">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold tracking-wide text-transparent bg-clip-text 
+            bg-gradient-to-r from-teal-400 to-cyan-300 drop-shadow-lg">
             {decodeURIComponent(classification)} Products
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto mt-3 text-sm">
-            Explore pharmaceutical formulations in the {decodeURIComponent(classification)} category.
+
+          <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-base">
+            Explore products under the {decodeURIComponent(classification)} classification.
           </p>
         </div>
 
-        {/* Loading */}
+        {/* Loading Skeletons */}
         {loading && (
-          <p className="text-center text-gray-400">Loading products...</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div 
+                key={i} 
+                className="h-64 rounded-2xl bg-teal-900/10 animate-pulse 
+                  border border-teal-700/20 shadow-md"
+              ></div>
+            ))}
+          </div>
         )}
 
         {/* Products Grid */}
         {!loading && products.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {products.map((p) => (
               <Link
                 key={p._id}
                 href={`/products/${createSlug(p.name)}`}
-                className="transform transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-teal-800/40 rounded-xl"
+                className="transform transition-all duration-300 hover:scale-[1.04] hover:-translate-y-2 
+                  hover:shadow-xl hover:shadow-teal-500/20"
               >
-                <div className="bg-[#122728] border border-teal-600/30 rounded-xl p-3 hover:border-teal-400/60 transition-colors">
+                <div
+                  className="p-3 rounded-2xl 
+                    bg-[#0A2F35]/40 backdrop-blur-md 
+                    border border-teal-600/30 hover:border-teal-400/60
+                    transition-all duration-300 shadow-md hover:bg-[#0A2F35]/60"
+                >
                   <ProductCard product={p} />
                 </div>
               </Link>
@@ -63,13 +79,24 @@ export default function ProductCategoryPage() {
 
         {/* Empty State */}
         {!loading && products.length === 0 && (
-          <p className="text-center text-gray-400">
-            No products found in this category.
-          </p>
+          <div className="text-center py-24">
+            <p className="text-gray-400 text-lg mb-4">
+              No products found in this category.
+            </p>
+
+            <Link 
+              href="/products/classification"
+              className="px-5 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 
+                transition text-white font-medium shadow-md"
+            >
+              Go Back
+            </Link>
+          </div>
         )}
 
-        {/* Accent Divider */}
-        <div className="mt-16 h-1 w-full bg-gradient-to-r from-transparent via-teal-500/40 to-transparent opacity-40"></div>
+        {/* Divider */}
+        <div className="mt-20 h-1 w-full bg-gradient-to-r 
+          from-transparent via-teal-500/40 to-transparent opacity-30"></div>
       </div>
     </div>
   );

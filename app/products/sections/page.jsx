@@ -14,28 +14,57 @@ export default function SectionsPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f1d1f] py-14 px-6">
+    <div className="min-h-screen bg-[#0f1d1f] py-20 px-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Page Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-semibold text-teal-300 tracking-wide">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-teal-300 tracking-wide drop-shadow-md">
             Section Wise Products
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto mt-3 text-sm">
-            Explore our product lineup categorized by pharmaceutical sections.
+
+          <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-base leading-relaxed">
+            Explore our complete pharmaceutical categories organized by sections 
+            for quick and easy browsing.
           </p>
         </div>
 
         {/* Sections Grid */}
         {sections.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {sections.map((section) => (
               <div
                 key={section}
-                className="transform transition-all duration-300 hover:scale-[1.04] hover:shadow-xl hover:shadow-teal-800/40 rounded-xl"
+                className="
+                  group relative rounded-2xl p-[2px]
+                  bg-gradient-to-br from-teal-500/20 via-teal-700/10 to-transparent
+                  hover:from-teal-400/40 hover:via-teal-700/20 hover:to-transparent
+                  transition-all duration-300 shadow-xl hover:shadow-teal-500/30
+                  cursor-pointer
+                "
               >
-                <div className="bg-[#122728] border border-teal-600/30 rounded-xl p-4 hover:border-teal-400/60 transition-colors">
+                <div
+                  className="
+                    bg-[#122728]/60 backdrop-blur-md rounded-2xl p-5 h-full
+                    border border-teal-600/20 group-hover:border-teal-400/40
+                    transition-all duration-300
+                  "
+                >
+                  {/* Icon */}
+                  <div className="flex justify-center mb-4">
+                    <div
+                      className="
+                        w-16 h-16 rounded-full bg-teal-500/20
+                        flex items-center justify-center
+                        text-teal-300 text-2xl font-semibold
+                        group-hover:bg-teal-500/30 transition-all
+                      "
+                    >
+                      {section.charAt(0).toUpperCase()}
+                    </div>
+                  </div>
+
+                  {/* GridCard */}
                   <GridCard
                     title={section}
                     link={`/products/sections/${encodeURIComponent(section)}`}
@@ -45,13 +74,13 @@ export default function SectionsPage() {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-400 mt-10">
+          <p className="text-center text-gray-400 mt-12 text-lg">
             No sections found.
           </p>
         )}
 
-        {/* Accent Divider */}
-        <div className="mt-16 h-1 w-full bg-gradient-to-r from-transparent via-teal-500/40 to-transparent opacity-40"></div>
+        {/* Bottom Accent Divider */}
+        <div className="mt-20 h-1 w-full bg-gradient-to-r from-transparent via-teal-500/40 to-transparent opacity-30"></div>
       </div>
     </div>
   );

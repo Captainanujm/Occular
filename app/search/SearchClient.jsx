@@ -1,5 +1,4 @@
 "use client";
-
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -22,7 +21,6 @@ export default function SearchClient() {
       try {
         const res = await fetch(`${api}/api/products`);
         const data = await res.json();
-
         setAll(Array.isArray(data) ? data : []);
       } catch {
         setAll([]);
@@ -33,28 +31,44 @@ export default function SearchClient() {
     load();
   }, [api]);
 
-  // Filter logic
+  // Filter Logic (name + desc + category + section + tags)
   useEffect(() => {
     if (!query) {
       setFiltered([]);
       return;
     }
 
+    const q = query.toLowerCase();
+
     setFiltered(
-      all.filter((p) =>
-        p?.name?.toLowerCase().includes(query)
-      )
+      all.filter((p) => {
+        const name = p?.name?.toLowerCase() || "";
+        const desc = p?.description?.toLowerCase() || "";
+        const category = p?.category?.toLowerCase() || "";
+        const section = p?.section?.toLowerCase() || "";
+        const tags = Array.isArray(p?.tags)
+          ? p.tags.map((t) => t.toLowerCase())
+          : [];
+
+        return (
+          name.includes(q) ||
+          desc.includes(q) ||
+          category.includes(q) ||
+          section.includes(q) ||
+          tags.some((t) => t.includes(q))
+        );
+      })
     );
   }, [query, all]);
 
-  // Open product
+  // Open Product Page
   const openProduct = (slug, name) => {
     const safeSlug = slug || name?.toLowerCase().replace(/\s+/g, "-");
     setPageLoading(true);
     router.push(`/products/${safeSlug}`);
   };
 
-  // Image fallback handler
+  // Image Handler
   const getImage = (p) =>
     p?.image || p?.image?.url || p?.images?.[0] || "/placeholder.png";
 
@@ -65,14 +79,14 @@ export default function SearchClient() {
         Search Results for: <span className="text-teal-400">{query}</span>
       </h1>
 
-      {/* Loading */}
+      {/* Loading Spinner */}
       {loading && (
         <div className="flex justify-center mt-20">
           <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
 
-      {/* No result */}
+      {/* No Results */}
       {!loading && filtered.length === 0 && (
         <p className="text-gray-400 text-lg mt-10">
           No products found for "{query}"
@@ -105,7 +119,7 @@ export default function SearchClient() {
 
             <div className="mt-3 flex justify-between items-center">
               <span className="text-sm text-gray-300">
-                {p.category || "General"}
+                {p.section || p.category || "General"}
               </span>
 
               <button

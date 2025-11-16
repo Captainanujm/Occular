@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Search, ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -12,13 +12,24 @@ const poppins = Poppins({
 
 const HeaderBar = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
   const [openMenu, setOpenMenu] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const [search, setSearch] = useState(""); // NEW STATE
 
   const isActive = (path) =>
     pathname === path ? "text-teal-400" : "text-gray-300";
 
   const closeMobileMenu = () => setMobileOpen(false);
+
+  // Redirect to search page
+  const handleSearch = () => {
+    if (!search.trim()) return;
+    router.push(`/search?query=${search}`);
+    setSearch("");
+  };
 
   return (
     <header
@@ -26,7 +37,7 @@ const HeaderBar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 md:py-4">
 
-        {/* Logo + Title */}
+        {/* Logo */}
         <div className="flex items-center gap-2">
           <img
             src="/Logo_image.jpg"
@@ -99,10 +110,15 @@ const HeaderBar = () => {
         <div className="hidden md:flex items-center border border-gray-700 rounded-full overflow-hidden">
           <input
             type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
             placeholder="Search..."
             className="px-4 py-2 outline-none bg-transparent text-gray-200 placeholder-gray-500 text-sm w-48"
           />
-          <button className="bg-teal-500 text-white px-3 py-2 hover:bg-teal-400 transition">
+          <button
+            onClick={handleSearch}
+            className="bg-teal-500 text-white px-3 py-2 hover:bg-teal-400 transition"
+          >
             <Search size={18} />
           </button>
         </div>
@@ -162,6 +178,26 @@ const HeaderBar = () => {
         <Link href="/contact" onClick={closeMobileMenu} className={`block py-3 ${isActive("/contact")}`}>
           Contact
         </Link>
+
+        {/* 🔥 Mobile Search Input */}
+        <div className="mt-4 flex items-center border border-gray-700 rounded-full overflow-hidden">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search products..."
+            className="px-4 py-2 outline-none bg-transparent text-gray-200 placeholder-gray-500 text-sm w-full"
+          />
+          <button
+            onClick={() => {
+              handleSearch();
+              closeMobileMenu();
+            }}
+            className="bg-teal-500 text-white px-3 py-2 hover:bg-teal-400 transition"
+          >
+            <Search size={18} />
+          </button>
+        </div>
       </div>
     </header>
   );

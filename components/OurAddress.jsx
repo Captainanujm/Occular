@@ -29,7 +29,7 @@ export default function AddressSection() {
             href="mailto:medlockhealthcare@gmail.com"
             className="hover:text-blue-400"
           >
-            medlockhealthcare@gmail.com
+           occularpharma1982@gmail.com
           </a>
         </div>
       </div>

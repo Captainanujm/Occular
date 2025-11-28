@@ -55,8 +55,8 @@ const HeaderBar = () => {
             Home
           </Link>
 
-          <Link href="#" className="flex items-center gap-1 text-gray-300 hover:text-teal-400">
-            About Us <ChevronDown size={16} />
+          <Link href="/about" className="flex items-center gap-1 text-gray-300 hover:text-teal-400">
+            About Us 
           </Link>
 
           <Link href="#" className="flex items-center gap-1 text-gray-300 hover:text-teal-400">

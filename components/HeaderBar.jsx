@@ -44,8 +44,9 @@ const HeaderBar = () => {
             alt="Occular Logo"
             className="w-10 h-10 md:w-14 md:h-14 rounded-full object-cover border-2 border-teal-400 shadow-teal-400/40 shadow-sm"
           />
-          <h1 className="text-xl md:text-2xl font-bold text-teal-400 tracking-tight">
+          <h1 className="flex flex-col text-xl md:text-2xl font-bold text-teal-400 tracking-tight">
             Occular
+            <span>Pharmaceuticals</span>
           </h1>
         </div>
 

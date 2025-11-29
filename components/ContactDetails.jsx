@@ -14,8 +14,7 @@ export default function ContactDetails() {
         <div className="flex items-start gap-3">
           <MapPin className="text-teal-400 w-5 h-5 mt-1 flex-shrink-0" />
           <p className="text-sm leading-relaxed">
-            Plot No 203, 2nd Floor, Industrial Area, Phase 2, Panchkula, Haryana
-            134113, India
+            K-169, Street No. 4, New Usman-pur Gautam Vihar, Delhi-53
           </p>
         </div>
 
@@ -26,7 +25,7 @@ export default function ContactDetails() {
             href="tel:+919896713447"
             className="text-gray-300 text-sm hover:text-white transition-all"
           >
-            +91-9896713447
+            +91-9935133355
           </a>
         </div>
 

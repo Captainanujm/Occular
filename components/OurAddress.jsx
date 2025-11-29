@@ -12,14 +12,14 @@ export default function AddressSection() {
         <div className="flex items-start gap-3">
           <FaMapMarkerAlt className="text-blue-400 mt-1" />
           <p>
-            Plot No 203, 2nd Floor, Industrial Area, Phase 2, Panchkula Haryana, Panchkula, Haryana 134113, India
+           K-169, Street No. 4, New Usman-pur Gautam Vihar, Delhi-53
           </p>
         </div>
 
         <div className="flex items-center gap-3">
           <FaPhoneAlt className="text-blue-400" />
-          <a href="tel:+919896713447" className="hover:text-blue-400">
-            +91-9896713447
+          <a href="tel:+91-9935133355" className="hover:text-blue-400">
+            +91-9935133355
           </a>
         </div>
 

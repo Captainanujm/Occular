@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import GridCard from "@/components/GridCard";
+import { motion } from "framer-motion";
 
 export default function SectionsPage() {
   const api = process.env.NEXT_PUBLIC_API_URL;
@@ -14,73 +15,88 @@ export default function SectionsPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f1d1f] py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-[#0b1213] via-[#0f1d1f] to-[#0b1213] py-20 px-6">
+      <div className="max-w-7xl mx-auto">
 
         {/* Page Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-teal-300 tracking-wide drop-shadow-md">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-6xl font-extrabold text-teal-300 tracking-wide drop-shadow-md">
             Section Wise Products
           </h1>
 
-          <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-base leading-relaxed">
-            Explore our complete pharmaceutical categories organized by sections 
-            for quick and easy browsing.
+          <div className="w-36 h-1 bg-gradient-to-r from-teal-400 to-teal-700 rounded-full mx-auto mt-4 shadow-lg"></div>
+
+          <p className="text-gray-300 max-w-2xl mx-auto mt-6 text-lg leading-relaxed">
+            Explore our complete pharmaceutical categories, crafted to help you browse effortlessly.
+            Find the medicines you need organized by sections.
           </p>
-        </div>
+        </motion.div>
 
         {/* Sections Grid */}
         {sections.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-            {sections.map((section) => (
-              <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
+          >
+            {sections.map((section, index) => (
+              <motion.div
                 key={section}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.07 }}
+                whileHover={{ scale: 1.05, rotateX: 5, rotateY: -5 }}
                 className="
-                  group relative rounded-2xl p-[2px]
-                  bg-gradient-to-br from-teal-500/20 via-teal-700/10 to-transparent
-                  hover:from-teal-400/40 hover:via-teal-700/20 hover:to-transparent
-                  transition-all duration-300 shadow-xl hover:shadow-teal-500/30
+                  group relative rounded-3xl p-[2px]
+                  bg-gradient-to-br from-teal-600/25 via-teal-900/10 to-transparent
+                  hover:from-teal-400/50 hover:via-teal-700/25 hover:to-transparent
+                  transition-all duration-500 shadow-xl hover:shadow-teal-400/40
                   cursor-pointer
                 "
               >
                 <div
                   className="
-                    bg-[#122728]/60 backdrop-blur-md rounded-2xl p-5 h-full
+                    bg-[#132b2d]/70 backdrop-blur-xl rounded-3xl p-7 h-full
                     border border-teal-600/20 group-hover:border-teal-400/40
-                    transition-all duration-300
+                    transition-all duration-500
                   "
                 >
-                  {/* Icon */}
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-center mb-6">
                     <div
                       className="
-                        w-16 h-16 rounded-full bg-teal-500/20
+                        w-18 h-18 rounded-full bg-teal-500/25
                         flex items-center justify-center
-                        text-teal-300 text-2xl font-semibold
-                        group-hover:bg-teal-500/30 transition-all
+                        text-teal-300 text-4xl font-extrabold tracking-wide
+                        group-hover:bg-teal-500/35 transition-all
                       "
                     >
                       {section.charAt(0).toUpperCase()}
                     </div>
                   </div>
 
-                  {/* GridCard */}
                   <GridCard
                     title={section}
                     link={`/products/sections/${encodeURIComponent(section)}`}
                   />
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         ) : (
-          <p className="text-center text-gray-400 mt-12 text-lg">
-            No sections found.
-          </p>
+          <div className="flex justify-center mt-20">
+            <div className="animate-pulse text-gray-400 text-xl">
+              Loading Sections...
+            </div>
+          </div>
         )}
 
-        {/* Bottom Accent Divider */}
-        <div className="mt-20 h-1 w-full bg-gradient-to-r from-transparent via-teal-500/40 to-transparent opacity-30"></div>
+        <div className="mt-20 h-[2px] w-full bg-gradient-to-r from-transparent via-teal-500/50 to-transparent opacity-40"></div>
       </div>
     </div>
   );

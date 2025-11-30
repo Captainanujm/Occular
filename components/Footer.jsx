@@ -53,10 +53,10 @@ export default function Footer() {
 
       {/* Bottom logos */}
       <div className="flex flex-wrap justify-center items-center mt-12 space-x-6">
-        <img src="/gmp.png" alt="GMP Logo" className="h-16" />
-        <img src="/iso9001.png" alt="ISO Logo" className="h-16" />
-        <img src="/who.png" alt="WHO Logo" className="h-16" />
-        <img src="/satisfaction.png" alt="Satisfaction Logo" className="h-16" />
+        <img src="/GMP_LOGO.avif" alt="GMP Logo" className="h-16" />
+        <img src="/ISO_9001-2015.svg.png" alt="ISO Logo" className="h-16" />
+        <img src="/WHO_logo.png" alt="WHO Logo" className="h-16" />
+        <img src="/Satisfaction_logo.avif" alt="Satisfaction Logo" className="h-16" />
       </div>
     </footer>
   );

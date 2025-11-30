@@ -94,7 +94,7 @@ const HeaderBar = () => {
             )}
           </div>
 
-          <Link href="#" className={`${isActive("/track-order")} hover:text-teal-400`}>
+          <Link href="/track_order" className={`${isActive("/track-order")} hover:text-teal-400`}>
             Track Order
           </Link>
 
@@ -168,7 +168,7 @@ const HeaderBar = () => {
           </div>
         </details>
 
-        <Link href="#" className="block py-3 border-b border-gray-800 text-gray-300">
+        <Link href="/track_order" className="block py-3 border-b border-gray-800 text-gray-300">
           Track Order
         </Link>
 

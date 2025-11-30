@@ -143,7 +143,7 @@ const HeaderBar = () => {
           Home
         </Link>
 
-        <Link href="#" className="block py-3 border-b border-gray-800 text-gray-300">
+        <Link href="/about" className="block py-3 border-b border-gray-800 text-gray-300">
           About Us
         </Link>
 

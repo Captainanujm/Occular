@@ -60,8 +60,8 @@ const HeaderBar = () => {
             About Us 
           </Link>
 
-          <Link href="#" className="flex items-center gap-1 text-gray-300 hover:text-teal-400">
-            Facility <ChevronDown size={16} />
+          <Link href="/facility" className="flex items-center gap-1 text-gray-300 hover:text-teal-400">
+            Facility
           </Link>
 
           {/* Dropdown */}
@@ -147,7 +147,7 @@ const HeaderBar = () => {
           About Us
         </Link>
 
-        <Link href="#" className="block py-3 border-b border-gray-800 text-gray-300">
+        <Link href="/facility" className="block py-3 border-b border-gray-800 text-gray-300">
           Facility
         </Link>
 

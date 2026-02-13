@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Occular",
-  description: "Medical website for enhanced facility for patients.",
+  description: "Medical website for enhanced facility among patients.",
 };
 
 export default function RootLayout({ children }) {

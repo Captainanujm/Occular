@@ -11,7 +11,8 @@ const app = express();
 app.use(cors({
   origin: [
     "https://occular-d25y.vercel.app", // deployed frontend
-    "http://localhost:3000"           // local frontend
+    "http://localhost:3000",
+    "https://www.occular.me",           // local frontend
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
